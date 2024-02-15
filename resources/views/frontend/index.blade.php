@@ -13,7 +13,7 @@
         <title>ALFAKES - Asosiasi Perusahaan Laboratorium  Pengujian dan  Kalibrasi Fasilitas Kesehatan Indonesia</title>
 		
 		<!-- Favicon -->
-        <link rel="icon" href="img/Alfakes - Icon.png">
+        <link rel="icon" href="{{ asset('/assets/frontend/img/Alfakes - Icon.png') }}">
 		
 		<!-- Google Fonts -->
 		<link href="https://fonts.googleapis.com/css?family=Poppins:200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
@@ -25,7 +25,7 @@
 		<!-- Font Awesome CSS -->
         <link rel="stylesheet" href="{{ asset('/assets/frontend/css/font-awesome.min.css') }}">
 		<!-- icofont CSS -->
-        <link rel="stylesheet" href="{{ asset('/assets/frontend/css/css/icofont.css') }}">
+        <link rel="stylesheet" href="{{ asset('/assets/frontend/css/icofont.css') }}">
 		<!-- Slicknav -->
 		<link rel="stylesheet" href="{{ asset('/assets/frontend/css/slicknav.min.css') }}">
 		<!-- Owl Carousel CSS -->
@@ -41,7 +41,6 @@
         <link rel="stylesheet" href="{{ asset('/assets/frontend/css/normalize.css') }}">
         <link rel="stylesheet" href="{{ asset('/assets/frontend/style.css') }}">
         <link rel="stylesheet" href="{{ asset('/assets/frontend/css/responsive.css') }}">
-		
     </head>
     <body>
 	
@@ -71,10 +70,11 @@
 							<div class="col-lg-3 col-md-3 col-12">
 								<!-- Start Logo -->
 								<div class="logo">
-									<!-- <a href="index.html"><img src="img/ALFAKES.png" alt="#"></a> -->
-									<div class="text">
-										<h1><span style="color: #b2d136;">ALFA</span><span style="color: #1a76d1;">KES</span></h1>
-									</div>
+									<a href="{{ route('home.index') }}">
+										<div class="text">
+											<h1><span style="color: #b2d136;">ALFA</span><span style="color: #1a76d1;">KES</span></h1>
+										</div>
+									</a>
 								</div>
 								<!-- End Logo -->
 								<!-- Mobile Nav -->
@@ -86,12 +86,7 @@
 								<div class="main-menu">
 									<nav class="navigation">
 										<ul class="nav menu">
-											<!-- <li class="active"><a href="#">Home <i class="icofont-rounded-down"></i></a>
-												<ul class="dropdown">
-													<li><a href="index.html">Home Page 1</a></li>
-												</ul>
-											</li> -->
-											<li class="active"><a href="#">Home </a></li>
+											<li class="active"><a href="{{ route('home.index') }}">Home </a></li>
 											<li><a href="#">Anggota </a></li>
 											<li><a href="#">Price List <i class="icofont-rounded-down"></i></a>
 												<ul class="dropdown">
@@ -106,11 +101,6 @@
 								</div>
 								<!--/ End Main Menu -->
 							</div>
-							<!-- <div class="col-lg-2 col-12">
-								<div class="get-quote">
-									<a href="appointment.html" class="btn">Book Appointment</a>
-								</div>
-							</div> -->
 						</div>
 					</div>
 				</div>
@@ -123,7 +113,7 @@
 		<section class="slider">
 			<div class="hero-slider">
 				<!-- Start Single Slider -->
-				<div class="single-slider" style="background-image:url('img/slider2.jpg')">
+				<div class="single-slider" style="background-image:url('{{ asset('/assets/frontend/img/slider2.jpg') }}')">
 					<div class="container">
 						<div class="row">
 							<div class="col-lg-7">
@@ -132,10 +122,6 @@
 									<p>
 										ALFAKES merupakan Asosiasi  Perusahaan Laboratorium Pengujian dan Kalibrasi Fasilitas Kesehatan, di dirikan oleh beberapa perusahaan kalibrasi di indonesia pada tahun 2012.
 									</p>
-									<!-- <div class="button">
-										<a href="#" class="btn">Get Appointment</a>
-										<a href="#" class="btn primary">Learn More</a>
-									</div> -->
 								</div>
 							</div>
 						</div>
@@ -143,17 +129,13 @@
 				</div>
 				<!-- End Single Slider -->
 				<!-- Start Single Slider -->
-				<div class="single-slider" style="background-image:url('img/slider.jpg')">
+				<div class="single-slider" style="background-image:url('{{ asset('/assets/frontend/img/slider.jpg') }}')">
 					<div class="container">
 						<div class="row">
 							<div class="col-lg-7">
 								<div class="text">
 									<h1>We Provide <span>Medical</span> Services That You Can <span>Trust!</span></h1>
 									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sed nisl pellentesque, faucibus libero eu, gravida quam. </p>
-									<div class="button">
-										<a href="#" class="btn">Get Appointment</a>
-										<a href="#" class="btn primary">About Us</a>
-									</div>
 								</div>
 							</div>
 						</div>
@@ -161,17 +143,13 @@
 				</div>
 				<!-- Start End Slider -->
 				<!-- Start Single Slider -->
-				<div class="single-slider" style="background-image:url('img/slider3.jpg')">
+				<div class="single-slider" style="background-image:url('{{ asset('/assets/frontend/img/slider3.jpg') }}')">
 					<div class="container">
 						<div class="row">
 							<div class="col-lg-7">
 								<div class="text">
 									<h1>We Provide <span>Medical</span> Services That You Can <span>Trust!</span></h1>
 									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sed nisl pellentesque, faucibus libero eu, gravida quam. </p>
-									<div class="button">
-										<a href="#" class="btn">Get Appointment</a>
-										<a href="#" class="btn primary">Conatct Now</a>
-									</div>
 								</div>
 							</div>
 						</div>
@@ -233,7 +211,7 @@
 					<div class="col-lg-12">
 						<div class="section-title">
 							<h2>We Are Always Ready to Help You</h2>
-							<img src="img/section-img.png" alt="#">
+							<img src="{{ asset('/assets/frontend/img/section-img.png') }}" alt="#">
 							<p>Lorem ipsum dolor sit amet consectetur adipiscing elit praesent aliquet. pretiumts</p>
 						</div>
 					</div>
@@ -337,7 +315,7 @@
 					<div class="col-lg-12">
 						<div class="section-title">
 							<h2>We Offer Different Services To Improve Your Health</h2>
-							<img src="img/section-img.png" alt="#">
+							<img src="{{ asset('/assets/frontend/img/section-img.png') }}" alt="#">
 							<p>Lorem ipsum dolor sit amet consectetur adipiscing elit praesent aliquet. pretiumts</p>
 						</div>
 					</div>
@@ -349,28 +327,12 @@
 							<h3>Who We Are</h3>
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pharetra antege vel est lobortis, a commodo magna rhoncus. In quis nisi non emet quam pharetra commodo. </p>
 							<p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. </p>
-							<div class="row">
-								<div class="col-lg-6">
-									<ul class="list">
-										<li><i class="fa fa-caret-right"></i>Maecenas vitae luctus nibh. </li>
-										<li><i class="fa fa-caret-right"></i>Duis massa massa.</li>
-										<li><i class="fa fa-caret-right"></i>Aliquam feugiat interdum.</li>
-									</ul>
-								</div>
-								<div class="col-lg-6">
-									<ul class="list">
-										<li><i class="fa fa-caret-right"></i>Maecenas vitae luctus nibh. </li>
-										<li><i class="fa fa-caret-right"></i>Duis massa massa.</li>
-										<li><i class="fa fa-caret-right"></i>Aliquam feugiat interdum.</li>
-									</ul>
-								</div>
-							</div>
 						</div>
 						<!-- End Choose Left -->
 					</div>
 					<div class="col-lg-6 col-12">
 						<!-- Start Choose Rights -->
-						<div class="choose-right">
+						<div class="choose-right" style="background-image:url('{{ asset('/assets/frontend/img/slider.jpg') }}')">
 							<div class="video-image">
 								<!-- Video Animation -->
 								<div class="promo-video">
@@ -381,7 +343,7 @@
 									</div>
 								</div>
 								<!--/ End Video Animation -->
-								<a href="https://www.youtube.com/watch?v=RFVXy6CRVR4" class="video video-popup mfp-iframe"><i class="fa fa-play"></i></a>
+								<a href="https://www.youtube.com/watch?v=rODYsEkAtUs" class="video video-popup mfp-iframe"><i class="fa fa-play"></i></a>
 							</div>
 						</div>
 						<!-- End Choose Rights -->
@@ -401,7 +363,6 @@
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque porttitor dictum turpis nec gravida.</p>
 							<div class="button">
 								<a href="#" class="btn">Contact Now</a>
-								<a href="#" class="btn second">Learn More<i class="fa fa-long-arrow-right"></i></a>
 							</div>
 						</div>
 					</div>
@@ -416,8 +377,8 @@
 				<div class="row">
 					<div class="col-lg-12">
 						<div class="section-title">
-							<h2>We Maintain Cleanliness Rules Inside Our Hospital</h2>
-							<img src="img/section-img.png" alt="#">
+							<h2>Our Member</h2>
+							<img src="{{ asset('/assets/frontend/img/section-img.png') }}" alt="#">
 							<p>Lorem ipsum dolor sit amet consectetur adipiscing elit praesent aliquet. pretiumts</p>
 						</div>
 					</div>
@@ -427,38 +388,13 @@
 				<div class="row">
 					<div class="col-lg-12 col-12">
 						<div class="owl-carousel portfolio-slider">
+							@for ($i = 0; $i < 10; $i++)
 							<div class="single-pf">
-								<img src="img/pf1.png" alt="GPS">
-								<a href="portfolio-details.html" class="btn">View Details</a>
+								<img src="{{ asset('/assets/frontend/img/pf1.png') }}" alt="GPS">
+								<a href="{{ route('member.index') }}" class="btn">View Details</a>
+								{{-- <a href="portfolio-details.html" class="btn">View Details</a> --}}
 							</div>
-							<div class="single-pf">
-								<img src="img/pf2.jpg" alt="#">
-								<a href="portfolio-details.html" class="btn">View Details</a>
-							</div>
-							<div class="single-pf">
-								<img src="img/pf3.jpg" alt="#">
-								<a href="portfolio-details.html" class="btn">View Details</a>
-							</div>
-							<div class="single-pf">
-								<img src="img/pf4.jpg" alt="#">
-								<a href="portfolio-details.html" class="btn">View Details</a>
-							</div>
-							<div class="single-pf">
-								<img src="img/pf1.png" alt="GPS">
-								<a href="portfolio-details.html" class="btn">View Details</a>
-							</div>
-							<div class="single-pf">
-								<img src="img/pf2.jpg" alt="#">
-								<a href="portfolio-details.html" class="btn">View Details</a>
-							</div>
-							<div class="single-pf">
-								<img src="img/pf3.jpg" alt="#">
-								<a href="portfolio-details.html" class="btn">View Details</a>
-							</div>
-							<div class="single-pf">
-								<img src="img/pf4.jpg" alt="#">
-								<a href="portfolio-details.html" class="btn">View Details</a>
-							</div>
+							@endfor
 						</div>
 					</div>
 				</div>
@@ -473,7 +409,7 @@
 					<div class="col-lg-12">
 						<div class="section-title">
 							<h2>We Offer Different Services To Improve Your Health</h2>
-							<img src="img/section-img.png" alt="#">
+							<img src="{{ asset('/assets/frontend/img/section-img.png') }}" alt="#">
 							<p>Lorem ipsum dolor sit amet consectetur adipiscing elit praesent aliquet. pretiumts</p>
 						</div>
 					</div>
@@ -491,33 +427,6 @@
 					<div class="col-lg-4 col-md-6 col-12">
 						<!-- Start Single Service -->
 						<div class="single-service">
-							<i class="icofont icofont-tooth"></i>
-							<h4><a href="service-details.html">Teeth Whitening</a></h4>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec luctus dictum eros ut imperdiet. </p>	
-						</div>
-						<!-- End Single Service -->
-					</div>
-					<div class="col-lg-4 col-md-6 col-12">
-						<!-- Start Single Service -->
-						<div class="single-service">
-							<i class="icofont icofont-heart-alt"></i>
-							<h4><a href="service-details.html">Heart Surgery</a></h4>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec luctus dictum eros ut imperdiet. </p>	
-						</div>
-						<!-- End Single Service -->
-					</div>
-					<div class="col-lg-4 col-md-6 col-12">
-						<!-- Start Single Service -->
-						<div class="single-service">
-							<i class="icofont icofont-listening"></i>
-							<h4><a href="service-details.html">Ear Treatment</a></h4>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec luctus dictum eros ut imperdiet. </p>	
-						</div>
-						<!-- End Single Service -->
-					</div>
-					<div class="col-lg-4 col-md-6 col-12">
-						<!-- Start Single Service -->
-						<div class="single-service">
 							<i class="icofont icofont-eye-alt"></i>
 							<h4><a href="service-details.html">Vision Problems</a></h4>
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec luctus dictum eros ut imperdiet. </p>	
@@ -527,8 +436,8 @@
 					<div class="col-lg-4 col-md-6 col-12">
 						<!-- Start Single Service -->
 						<div class="single-service">
-							<i class="icofont icofont-blood"></i>
-							<h4><a href="service-details.html">Blood Transfusion</a></h4>
+							<i class="icofont icofont-heart-alt"></i>
+							<h4><a href="service-details.html">Heart Surgery</a></h4>
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec luctus dictum eros ut imperdiet. </p>	
 						</div>
 						<!-- End Single Service -->
@@ -545,7 +454,7 @@
 					<div class="col-lg-12">
 						<div class="section-title">
 							<h2>Price List</h2>
-							<img src="img/section-img.png" alt="#">
+							<img src="{{ asset('/assets/frontend/img/section-img.png') }}" alt="#">
 							<p>List harga IPM (Inspection Preventive Maintenance), kalibrasi alat kesehatan dan kalibrasi kalibrator.</p>
 						</div>
 					</div>
@@ -640,47 +549,24 @@
 		</section>	
 		<!--/ End Pricing Table -->
 		
-		
-		
-		
 		<!-- Start clients -->
-		<div class="clients overlay">
+		{{-- <div class="clients overlay">
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-12 col-md-12 col-12">
 						<div class="owl-carousel clients-slider">
+							@for ($i = 0; $i < 10; $i++)
 							<div class="single-clients">
-								<img src="img/client1.png" alt="#">
+								<a href="{{ route('home.index') }}">
+									<img src="{{ asset('/assets/frontend/img/client1.png') }}" alt="#">
+								</a>
 							</div>
-							<div class="single-clients">
-								<img src="img/client2.png" alt="#">
-							</div>
-							<div class="single-clients">
-								<img src="img/client3.png" alt="#">
-							</div>
-							<div class="single-clients">
-								<img src="img/client4.png" alt="#">
-							</div>
-							<div class="single-clients">
-								<img src="img/client5.png" alt="#">
-							</div>
-							<div class="single-clients">
-								<img src="img/client1.png" alt="#">
-							</div>
-							<div class="single-clients">
-								<img src="img/client2.png" alt="#">
-							</div>
-							<div class="single-clients">
-								<img src="img/client3.png" alt="#">
-							</div>
-							<div class="single-clients">
-								<img src="img/client4.png" alt="#">
-							</div>
+							@endfor
 						</div>
 					</div>
 				</div>
 			</div>
-		</div>
+		</div> --}}
 		<!--/Ens clients -->
 		
 		<!-- Start Appointment -->
@@ -690,7 +576,7 @@
 					<div class="col-lg-12">
 						<div class="section-title">
 							<h2>We Are Always Ready to Help You. Book An Appointment</h2>
-							<img src="img/section-img.png" alt="#">
+							<img src="{{ asset('/assets/frontend/img/section-img.png') }}" alt="#">
 							<p>Lorem ipsum dolor sit amet consectetur adipiscing elit praesent aliquet. pretiumts</p>
 						</div>
 					</div>
@@ -754,7 +640,7 @@
 								<div class="col-lg-5 col-md-4 col-12">
 									<div class="form-group">
 										<div class="button">
-											<button type="submit" class="btn">Book An Appointment</button>
+											<button type="submit" class="btn">Send</button>
 										</div>
 									</div>
 								</div>
@@ -766,41 +652,13 @@
 					</div>
 					<div class="col-lg-6 col-md-12 ">
 						<div class="appointment-image">
-							<img src="img/contact-img.png" alt="#">
+							<img src="{{ asset('/assets/frontend/img/contact-img.png') }}" alt="#">
 						</div>
 					</div>
 				</div>
 			</div>
 		</section>
 		<!-- End Appointment -->
-		
-		<!-- Start Newsletter Area -->
-		<section class="newsletter section">
-			<div class="container">
-				<div class="row ">
-					<div class="col-lg-6  col-12">
-						<!-- Start Newsletter Form -->
-						<div class="subscribe-text ">
-							<h6>Sign up for newsletter</h6>
-							<p class="">Cu qui soleat partiendo urbanitas. Eum aperiri indoctum eu,<br> homero alterum.</p>
-						</div>
-						<!-- End Newsletter Form -->
-					</div>
-					<div class="col-lg-6  col-12">
-						<!-- Start Newsletter Form -->
-						<div class="subscribe-form ">
-							<form action="mail/mail.php" method="get" target="_blank" class="newsletter-inner">
-								<input name="EMAIL" placeholder="Your email address" class="common-input" onfocus="this.placeholder = ''"
-									onblur="this.placeholder = 'Your email address'" required="" type="email">
-								<button class="btn">Subscribe</button>
-							</form>
-						</div>
-						<!-- End Newsletter Form -->
-					</div>
-				</div>
-			</div>
-		</section>
-		<!-- /End Newsletter Area -->
 		
 		<!-- Footer Area -->
 		<footer id="footer" class="footer ">
@@ -810,7 +668,7 @@
 					<div class="row">
 						<div class="col-lg-12 col-md-12 col-12">
 							<div class="copyright-content">
-								<p>© Copyright 2018  |  All Rights Reserved by <a href="https://www.wpthemesgrid.com" target="_blank">wpthemesgrid.com</a> </p>
+								<p>© Copyright {{date('Y')}}  |  All Rights Reserved by <a href="{{ route('home.index') }}" target="_blank">ALFAKES</a> </p>
 							</div>
 						</div>
 					</div>
