@@ -1,6 +1,6 @@
 @extends('master')
 @section('title')
-    Employee
+    User
 @endsection
 
 @section('custom_link_css')
@@ -24,12 +24,12 @@
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-6">
-                        <h1 class="m-0">Employee</h1>
+                        <h1 class="m-0">User</h1>
                     </div><!-- /.col -->
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
                             <li class="breadcrumb-item"><a href="{{ route('dashboard.index') }}">Beranda</a></li>
-                            <li class="breadcrumb-item active">Employee</li>
+                            <li class="breadcrumb-item active">User</li>
                         </ol>
                     </div><!-- /.col -->
                 </div><!-- /.row -->
@@ -44,16 +44,7 @@
                     <div class="col-12">
                         <div class="card">
                             <div class="card-header">
-                                <a href="{{ route('dashboard.user.create') }}" title="Add"
-                                    class="btn btn-primary col-2 btn-add-user"><i class="fa solid fa-plus"></i></a>
-                                <a href="#" title="Employee Import" class="btn btn-success col-2 btn-import-user"><i
-                                        class="fa solid fa-file-import"></i></a>
-                                <a href="#" title="Emergency Import" class="btn btn-info col-2 btn-import-emergency"><i
-                                    class="fa solid fa-file-import"></i></a>
-                                @if(Auth::User()->id == 1)
-                                <a href="#" title="Golongan Darah Import" class="btn btn-info col-2 btn-import-golongan_darah"><i
-                                    class="fa solid fa-file-import"></i></a>
-                                @endif
+                                <a href="{{ route('dashboard.user.create') }}" title="Add" class="btn btn-primary col-2 btn-add-user"><i class="fa solid fa-plus"></i></a>
                             </div>
 
                             {{-- @if (session()->has('success'))

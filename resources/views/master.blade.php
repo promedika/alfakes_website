@@ -29,7 +29,7 @@
 </head>
 
 <body class="hold-transition sidebar-mini layout-fixed">
-    {{-- <div class="modal fade in" id="loader" data-backdrop="static" data-keyboard="false">
+    <div class="modal fade in" id="loader" data-backdrop="static" data-keyboard="false">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content" style="background-color: transparent; box-shadow: none; border: none;">
                 <div class="modal-body" style="left: 25%">
@@ -37,7 +37,7 @@
                 </div>
             </div>
         </div>
-    </div> --}}
+    </div>
     <div class="wrapper">
 
         <!-- Navbar -->
@@ -100,12 +100,28 @@
                 <!-- Sidebar Menu -->
                 <nav class="mt-2">
                     <ul class="nav nav-pills nav-sidebar nav-child-indent flex-column" data-widget="treeview" role="menu"
-                        data-accordion="false" style="height: ">
+                        data-accordion="false">
                         <li class="nav-item">
                             <a href="{{ route('dashboard.index') }}" class="nav-link">
                                 <p>
-                                    <i class="nav-icon fa fa-laptop"></i>
+                                    <i class="nav-icon fas fa-tachometer-alt"></i>
                                     Dashboard
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ route('dashboard.users.index') }}" class="nav-link">
+                                <p>
+                                    <i class="nav-icon fa fa-user"></i>
+                                    User
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ route('dashboard.index') }}" class="nav-link">
+                                <p>
+                                    <i class="nav-icon fa fa-users"></i>
+                                    Peserta
                                 </p>
                             </a>
                         </li>

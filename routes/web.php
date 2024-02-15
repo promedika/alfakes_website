@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\DropdownController;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Artisan;
 
 /*
 |--------------------------------------------------------------------------
@@ -36,11 +37,15 @@ Route::fallback(function () {
     return view('errors.404');
 });
 
+Route::get('/', function () {
+    return view('frontend.index');
+});
+
 Route::get('/login', 'App\Http\Controllers\LoginController@formlogin')->name('login')->middleware('guest');
 Route::post('/login', 'App\Http\Controllers\LoginController@actionLogin')->name('action.login');
 
 Route::group(['middleware' => 'auth'], function () {
-    Route::get('/', 'App\Http\Controllers\DashboardController@index')->name('dashboard.index');
+    Route::get('/dashboard', 'App\Http\Controllers\DashboardController@index')->name('dashboard.index');
     Route::get('/logout', 'App\Http\Controllers\DashboardController@logout')->name('logout');
 
     Route::get('/users', 'App\Http\Controllers\UserController@index')->name('dashboard.users.index');
@@ -64,4 +69,11 @@ Route::group(['middleware' => 'auth'], function () {
     Route::post('/users/declineall', 'App\Http\Controllers\UserController@declineall')->name('dashboard.users.declineall');
     Route::post('/users/edit1', 'App\Http\Controllers\UserController@edit1')->name('dashboard.users.edit1');
     Route::post('/users/edit2', 'App\Http\Controllers\UserController@edit2')->name('dashboard.users.edit2');
+
+    Route::get('/peserta', 'App\Http\Controllers\PesertaController@index')->name('peserta.index');
+    Route::post('/peserta/create', 'App\Http\Controllers\PesertaController@store')->name('peserta.create');
+    Route::post('/peserta/edit', 'App\Http\Controllers\PesertaController@edit')->name('peserta.edit');
+    Route::post('/peserta/update', 'App\Http\Controllers\PesertaController@update')->name('peserta.update');
+    Route::post('/peserta/delete', 'App\Http\Controllers\PesertaController@destroy')->name('peserta.delete');
+
 });

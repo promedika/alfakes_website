@@ -17,7 +17,7 @@ class CreateUsersTable extends Migration
         Schema::create('users', function (Blueprint $table) {
             $table->increments('id');
             $table->string('nik')->nullable();
-            $table->string('fullname')->nullable();;
+            $table->string('fullname')->nullable();
             $table->date('birth_date')->nullable();
             $table->string('password')->default(Hash::make('alfakes'));
             $table->string('profile')->default('default.jpg');
@@ -51,6 +51,7 @@ class CreateUsersTable extends Migration
             $table->string('function')->nullable();
 			$table->string('status')->nullable();
             $table->string('phone')->nullable();
+            $table->string('peserta')->nullable();
             $table->string('salary')->nullable();
 			$table->integer('role')->nullable(); // note for role : 0 -> super admin, 1 -> admin, 2 -> member, 3 -> report
 			$table->string('status_delete')->nullable();

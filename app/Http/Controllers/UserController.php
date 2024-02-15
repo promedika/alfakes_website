@@ -2,20 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Imports\EmergenciesImport;
-use App\Imports\GolonganDarahImport;
-use App\Imports\UsersImport;
-use App\Models\department as Department;
-use App\Models\Division;
-use App\Models\Emergencies;
-use App\Models\EmpPosition;
-use App\Models\EmpStatus;
-use App\Models\GradeCategory;
-use App\Models\indonesia_cities;
-use App\Models\Jabatan;
-use App\Models\Level;
-use App\Models\Outlet;
-use App\Models\TerminateReason;
 use App\Models\User;
 use Exception;
 use Illuminate\Http\Request;
@@ -23,9 +9,6 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Hash;
-use Laravolt\Indonesia\Models\Province;
-use Maatwebsite\Excel\Facades\Excel;
-use ZipArchive;
 
 class UserController extends Controller
 {
@@ -36,46 +19,9 @@ class UserController extends Controller
      */
     public function index()
     {
-        if ((Auth::User()->role != 2 && Auth::user()->department == 3) || Auth::user()->id == 1) {
-            $users = User::where('employee_status', '=', 'ACTIVE')
-                ->where('status_delete', '!=', 1)
-                ->where('approved_by', '=', 1)
-                ->whereNotIn('id', [1005, 1006, 1007])
-                ->get();
-
-            $emp_stats = EmpStatus::where('status_delete', '!=', 1)->get();
-            $jabatans = Jabatan::all();
-            $levels = Level::all();
-            $grades = GradeCategory::all();
-            $divisions = Division::all();
-
-            $departments = Department::all();
-
-            $emp_stats_arr = [];
-            foreach ($emp_stats as $v) {
-                $emp_stats_arr[$v->status_name] = $v->id;
-            }
-
-            $provinces = Province::pluck('name', 'code');
-
-            foreach ($users as $k => $v) {
-                if ($v->employee_status == 'ACTIVE') {
-                    $usr_id = $v->id;
-                    $user_los = User::find($usr_id);
-                    $user_los->length_of_service = $this->hris_length_of_service($v->join_date);
-                    $user_los->save();
-                }
-
-                if (is_null($v->employment_status)) {
-                    continue;
-                }
-
-                $v->employment_status = array_search($v->employment_status, $emp_stats_arr);
-            }
-
-            $area_outlets = Outlet::all();
-
-            return view('user.index', compact('users', 'emp_stats', 'jabatans', 'levels', 'grades', 'divisions', 'departments', 'provinces', 'area_outlets'));
+        if (Auth::user()->id == 1) {
+            // return view('user.index', compact('users', 'emp_stats', 'jabatans', 'levels', 'grades', 'divisions', 'departments', 'provinces', 'area_outlets'));
+            return view('user.index');
         } else {
             return redirect('error.404');
         }
