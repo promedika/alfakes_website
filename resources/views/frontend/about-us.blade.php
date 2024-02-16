@@ -4,13 +4,13 @@
         <!-- Meta Tags -->
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="keywords" content="ALFAKES - Asosiasi Perusahaan Laboratorium  Pengujian dan  Kalibrasi Fasilitas Kesehatan Indonesia">
-		<meta name="description" content="ALFAKES - Asosiasi Perusahaan Laboratorium  Pengujian dan  Kalibrasi Fasilitas Kesehatan Indonesia">
+		<meta name="keywords" content="ALFAKES - Asosiasi Perusahaan Laboratorium Pengujian dan Kalibrasi Fasilitas Kesehatan Indonesia">
+		<meta name="description" content="ALFAKES - Asosiasi Perusahaan Laboratorium Pengujian dan Kalibrasi Fasilitas Kesehatan Indonesia">
 		<meta name='copyright' content=''>
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		
 		<!-- Title -->
-        <title>ALFAKES - Asosiasi Perusahaan Laboratorium  Pengujian dan  Kalibrasi Fasilitas Kesehatan Indonesia</title>
+        <title>ALFAKES - About Us</title>
 		
 		<!-- Favicon -->
         <link rel="icon" href="{{ asset('/assets/frontend/img/Alfakes - Icon.png') }}">
@@ -87,15 +87,15 @@
 									<nav class="navigation">
 										<ul class="nav menu">
 											<li class="active"><a href="{{ route('home.index') }}">Home </a></li>
-											<li><a href="#">Anggota </a></li>
+											<li><a href="#">Member </a></li>
 											<li><a href="#">Price List <i class="icofont-rounded-down"></i></a>
 												<ul class="dropdown">
 													<li><a href="#">Price List IPM</a></li>
 													<li><a href="#">Price List Kalibrasi</a></li>
 												</ul>
 											</li>
-											<li><a href="contact.html">Contact Us</a></li>
-											<li><a href="#">About Us </a></li>
+											<li><a href="{{ route('contact-us.index') }}">Contact Us</a></li>
+											<li><a href="{{ route('about-us.index') }}">About Us </a></li>
 										</ul>
 									</nav>
 								</div>
@@ -115,11 +115,11 @@
 				<div class="bread-inner">
 					<div class="row">
 						<div class="col-12">
-							<h2>Member Details</h2>
+							<h2>About Us</h2>
 							<ul class="bread-list">
 								<li><a href="{{ route('home.index') }}">Home</a></li>
 								<li><i class="icofont-simple-right"></i></li>
-								<li class="active">Member Details</li>
+								<li class="active">About Us</li>
 							</ul>
 						</div>
 					</div>
@@ -143,11 +143,12 @@
 							</div>
 							<div class="date">
 								<ul>
-									<li><span>PT. Global Promedika Services</span></li>
+									<li><span>ALFAKES</span></li>
 								</ul>
 							</div>
 							<div class="body-text">
-								<h3>Here is the name of this project here</h3>
+								<h3>ALFAKES</h3>
+								<p>Asosiasi Perusahaan Laboratorium Pengujian dan Kalibrasi Fasilitas Kesehatan Indonesia</p>
 								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor a ti incididunt ut labore et dolore to in magna aliqua. Ut enim ad minim veniam, quis to the in nostrud.abore et dolore magna aliqua uis nostrud.Lorem ipsum dolor sit amet, in a in to in a consectetur.ncididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis to the in nostrud.abore et dolore magna in a aliqua uis nostrud.Lorem ipsum dolor sit amet, in aed do eiusmod</p>
 								<p>ncididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis to the in nostrud.abore et dolore magna to in aliqua uis nostrud.Lorem ipsum dolor sit amet, in aed do eiusmod.ncididunt ut labore et dolore magna aliqua. </p>
 								<p>ncididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis to the in nostrud.abore et dolore magna a aliqua uis nostrud.Lorem ipsum dolor sit amet, in aed do eiusmod.ncididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis to the in nostrud.abore et dolore magna aliqua uis nostrud.Lorem ipsum dolor sit amet, in aed do eiusmod. dolor sit amet, in aed do eiusmod.ncididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis to the in nostrud.abore et dolore magna aliqua uis nostrud.</p>
@@ -167,7 +168,7 @@
 					<div class="row">
 						<div class="col-lg-12 col-md-12 col-12">
 							<div class="copyright-content">
-								<p>© Copyright {{date('Y')}}  |  All Rights Reserved by <a href="{{ route('home.index') }}" target="_blank">ALFAKES</a> </p>
+								<p>© Copyright {{date('Y')}} | All Rights Reserved by <a href="{{ route('home.index') }}" target="_blank">ALFAKES</a> </p>
 							</div>
 						</div>
 					</div>

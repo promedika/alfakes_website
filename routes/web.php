@@ -34,7 +34,7 @@ Route::get('/clear-cache', function () {
 });
 
 Route::fallback(function () {
-    return view('errors.404');
+    return view('frontend.404');
 });
 
 Route::get('/', function () {
@@ -42,8 +42,16 @@ Route::get('/', function () {
 })->name('home.index');
 
 Route::get('/member', function () {
-    return view('frontend.portfolio-details');
+    return view('frontend.member-details');
 })->name('member.index');
+
+Route::get('/contact-us', function () {
+    return view('frontend.contact-us');
+})->name('contact-us.index');
+
+Route::get('/about-us', function () {
+    return view('frontend.about-us');
+})->name('about-us.index');
 
 Route::get('/login', 'App\Http\Controllers\LoginController@formlogin')->name('login')->middleware('guest');
 Route::post('/login', 'App\Http\Controllers\LoginController@actionLogin')->name('action.login');

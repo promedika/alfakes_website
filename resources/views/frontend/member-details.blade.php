@@ -1,7 +1,7 @@
 <!doctype html>
 <html class="no-js" lang="zxx">
     <head>
-		<!-- Meta Tags -->
+        <!-- Meta Tags -->
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="keywords" content="ALFAKES - Asosiasi Perusahaan Laboratorium Pengujian dan Kalibrasi Fasilitas Kesehatan Indonesia">
@@ -10,7 +10,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		
 		<!-- Title -->
-        <title>ALFAKES - About Us</title>
+        <title>ALFAKES - Member Details</title>
 		
 		<!-- Favicon -->
         <link rel="icon" href="{{ asset('/assets/frontend/img/Alfakes - Icon.png') }}">
@@ -108,25 +108,56 @@
 			<!--/ End Header Inner -->
 		</header>
 		<!-- End Header Area -->
-		
-		<!-- Error Page -->
-		<section class="error-page section">
+	
+		<!-- Breadcrumbs -->
+		<div class="breadcrumbs overlay">
 			<div class="container">
-				<div class="row">
-					<div class="col-lg-6 offset-lg-3 col-12">
-						<!-- Error Inner -->
-						<div class="error-inner">
-							<h1>404<span>Oop's  sorry we can't find that page!</span></h1>
-							<p>Aenean eget sollicitudin lorem, et pretium felis. Nullam euismod diam libero, sed dapibus leo laoreet ut. Suspendisse potenti. Phasellus urna lacus</p>
-							{{-- <button class="btn" type="submit">Back To Home Page</button> --}}
-							<a href="{{ route('home.index') }}"><button class="btn" type="submit">Back To Home Page</button></a>
+				<div class="bread-inner">
+					<div class="row">
+						<div class="col-12">
+							<h2>Member Details</h2>
+							<ul class="bread-list">
+								<li><a href="{{ route('home.index') }}">Home</a></li>
+								<li><i class="icofont-simple-right"></i></li>
+								<li class="active">Member Details</li>
+							</ul>
 						</div>
-						<!--/ End Error Inner -->
 					</div>
 				</div>
 			</div>
-		</section>	
-		<!--/ End Error Page -->
+		</div>
+		<!-- End Breadcrumbs -->
+	
+		<!-- Start Portfolio Details Area -->
+		<section class="pf-details section">
+			<div class="container">
+				<div class="row">
+					<div class="col-12">
+						<div class="inner-content">
+							<div class="image-slider">
+								<div class="pf-details-slider">
+									<img src="{{ asset('/assets/frontend/img/call-bg.jpg') }}" alt="#">
+									<img src="{{ asset('/assets/frontend/img/call-bg.jpg') }}" alt="#">
+									<img src="{{ asset('/assets/frontend/img/call-bg.jpg') }}" alt="#">
+								</div>
+							</div>
+							<div class="date">
+								<ul>
+									<li><span>PT. Global Promedika Services</span></li>
+								</ul>
+							</div>
+							<div class="body-text">
+								<h3>Here is the name of this project here</h3>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor a ti incididunt ut labore et dolore to in magna aliqua. Ut enim ad minim veniam, quis to the in nostrud.abore et dolore magna aliqua uis nostrud.Lorem ipsum dolor sit amet, in a in to in a consectetur.ncididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis to the in nostrud.abore et dolore magna in a aliqua uis nostrud.Lorem ipsum dolor sit amet, in aed do eiusmod</p>
+								<p>ncididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis to the in nostrud.abore et dolore magna to in aliqua uis nostrud.Lorem ipsum dolor sit amet, in aed do eiusmod.ncididunt ut labore et dolore magna aliqua. </p>
+								<p>ncididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis to the in nostrud.abore et dolore magna a aliqua uis nostrud.Lorem ipsum dolor sit amet, in aed do eiusmod.ncididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis to the in nostrud.abore et dolore magna aliqua uis nostrud.Lorem ipsum dolor sit amet, in aed do eiusmod. dolor sit amet, in aed do eiusmod.ncididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis to the in nostrud.abore et dolore magna aliqua uis nostrud.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- End Portfolio Details Area -->
 		
 		<!-- Footer Area -->
 		<footer id="footer" class="footer ">
