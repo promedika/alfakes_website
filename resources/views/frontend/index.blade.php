@@ -71,8 +71,11 @@
 								<!-- Start Logo -->
 								<div class="logo">
 									<a href="{{ route('home.index') }}">
+										{{-- <img src="{{ asset('assets/img/logo_alfakes_updated.png') }}"> --}}
 										<div class="text">
-											<h1><span style="color: #b2d136;">ALFA</span><span style="color: #1a76d1;">KES</span></h1>
+											<h1>
+												<span style="color: #b2d136;">ALFA</span><span style="color: #1a76d1;">KES</span>
+											</h1>
 										</div>
 									</a>
 								</div>
