@@ -86,12 +86,12 @@
 								<div class="main-menu">
 									<nav class="navigation">
 										<ul class="nav menu">
-											<li class="active"><a href="{{ route('home.index') }}">Home </a></li>
-											<li><a href="#">Member </a></li>
+											<li><a href="{{ route('home.index') }}">Home </a></li>
+											<li><a href="{{ route('list-members.index') }}">Members </a></li>
 											<li><a href="#">Price List <i class="icofont-rounded-down"></i></a>
 												<ul class="dropdown">
-													<li><a href="#">Price List IPM</a></li>
-													<li><a href="#">Price List Kalibrasi</a></li>
+													<li><a href="{{ route('price-list-ipm.index') }}">Price List IPM</a></li>
+													<li><a href="{{ route('price-list-kalibrasi.index') }}">Price List Kalibrasi</a></li>
 												</ul>
 											</li>
 											<li><a href="{{ route('contact-us.index') }}">Contact Us</a></li>
@@ -118,8 +118,7 @@
 						<div class="error-inner">
 							<h1>404<span>Oop's  sorry we can't find that page!</span></h1>
 							<p>Aenean eget sollicitudin lorem, et pretium felis. Nullam euismod diam libero, sed dapibus leo laoreet ut. Suspendisse potenti. Phasellus urna lacus</p>
-							{{-- <button class="btn" type="submit">Back To Home Page</button> --}}
-							<a href="{{ route('home.index') }}"><button class="btn" type="submit">Back To Home Page</button></a>
+							<a href="{{ route('home.index') }}"><button class="btn">Back To Home Page</button></a>
 						</div>
 						<!--/ End Error Inner -->
 					</div>

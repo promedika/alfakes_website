@@ -10,7 +10,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		
 		<!-- Title -->
-        <title>ALFAKES - Member Details</title>
+        <title>ALFAKES - Price List IPM</title>
 		
 		<!-- Favicon -->
         <link rel="icon" href="{{ asset('/assets/frontend/img/Alfakes - Icon.png') }}">
@@ -36,6 +36,9 @@
         <link rel="stylesheet" href="{{ asset('/assets/frontend/css/animate.min.css') }}">
 		<!-- Magnific Popup CSS -->
         <link rel="stylesheet" href="{{ asset('/assets/frontend/css/magnific-popup.css') }}">
+
+		<!-- Datatables -->
+        <link rel="stylesheet" href="//cdn.datatables.net/2.0.0/css/dataTables.dataTables.min.css">
 		
 		<!-- Medipro CSS -->
         <link rel="stylesheet" href="{{ asset('/assets/frontend/css/normalize.css') }}">
@@ -115,11 +118,11 @@
 				<div class="bread-inner">
 					<div class="row">
 						<div class="col-12">
-							<h2>Member Details</h2>
+							<h2>Price List IPM</h2>
 							<ul class="bread-list">
 								<li><a href="{{ route('home.index') }}">Home</a></li>
 								<li><i class="icofont-simple-right"></i></li>
-								<li class="active">Member Details</li>
+								<li class="active">Price List IPM</li>
 							</ul>
 						</div>
 					</div>
@@ -134,27 +137,47 @@
 				<div class="row">
 					<div class="col-12">
 						<div class="inner-content">
-							<div class="image-slider">
-								<div class="pf-details-slider">
-									<img src="{{ asset('/assets/frontend/img/call-bg.jpg') }}" alt="#">
-									<img src="{{ asset('/assets/frontend/img/call-bg.jpg') }}" alt="#">
-									<img src="{{ asset('/assets/frontend/img/call-bg.jpg') }}" alt="#">
+							<div class="body-text">
+								<h3>Daftar Harga IPM Alat Kesehatan</h3>
+								<p>Asosiasi Laboratorium Pengujian dan Kalibrasi Alat Kesehatan Berlaku Mulai Januari 2021</p>
+								<p>&nbsp;</p>
+							</div>
+						</div>
+						<div class="card">
+							<div class="card-body">
+								<div class="table-responsive">
+									<table class="table table-bordered table-striped table-hover" id="table">
+										<thead class="thead-dark">
+											<tr>
+												<th>No</th>
+												<th>Nama Alat Kesehatan</th>
+												<th>Harga (Rp)</th>
+											</tr>
+										</thead>
+										<tbody>
+											@php $no = 1; @endphp
+											@for ($i = 0; $i < 10; $i++)
+											<tr>
+												<td>{{$no++}}</td>
+												<td>Anaesthesia + Ventilator</td>
+												<td>2.309.000</td>
+											</tr>
+											@endfor
+										</tbody>
+									</table>
 								</div>
 							</div>
-							<div class="date">
-								<ul>
-									<li><span>PT. Global Promedika Services</span></li>
-								</ul>
-							</div>
+						</div>
+						<div class="inner-content">
 							<div class="body-text">
-								<h3>Here is the name of this project here</h3>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor a ti incididunt ut labore et dolore to in magna aliqua. Ut enim ad minim veniam, quis to the in nostrud.abore et dolore magna aliqua uis nostrud.Lorem ipsum dolor sit amet, in a in to in a consectetur.ncididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis to the in nostrud.abore et dolore magna in a aliqua uis nostrud.Lorem ipsum dolor sit amet, in aed do eiusmod</p>
-								<p>ncididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis to the in nostrud.abore et dolore magna to in aliqua uis nostrud.Lorem ipsum dolor sit amet, in aed do eiusmod.ncididunt ut labore et dolore magna aliqua. </p>
-								<p>ncididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis to the in nostrud.abore et dolore magna a aliqua uis nostrud.Lorem ipsum dolor sit amet, in aed do eiusmod.ncididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis to the in nostrud.abore et dolore magna aliqua uis nostrud.Lorem ipsum dolor sit amet, in aed do eiusmod. dolor sit amet, in aed do eiusmod.ncididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis to the in nostrud.abore et dolore magna aliqua uis nostrud.</p>
+								<p>&nbsp;</p>
+								<h4>Catatan</h4>
+								<p>Harga diatas untuk 1x (satu kali) visit</p>
 							</div>
 						</div>
 					</div>
 				</div>
+				
 			</div>
 		</section>
 		<!-- End Portfolio Details Area -->
@@ -217,5 +240,23 @@
 		<script src="{{ asset('/assets/frontend/js/bootstrap.min.js') }}"></script>
 		<!-- Main JS -->
 		<script src="{{ asset('/assets/frontend/js/main.js') }}"></script>
+
+		<!--Datatables -->
+		<script src="//cdn.datatables.net/2.0.0/js/dataTables.min.js"></script>
+
+		<script>
+			$(document).ready(function(){
+				// let table = new DataTable('#table');
+				$('#table').DataTable({
+				   "paging": true,
+				   "lengthChange": true,
+				   "searching": true,
+				   "ordering": true,
+				   "info": true,
+				   "autoWidth": false,
+				   "responsive": true,
+				});
+			})
+		</script>
     </body>
 </html>

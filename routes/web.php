@@ -41,6 +41,18 @@ Route::get('/', function () {
     return view('frontend.index');
 })->name('home.index');
 
+Route::get('/list-of-members', function () {
+    return view('frontend.list-of-members');
+})->name('list-members.index');
+
+Route::get('/price-list-ipm', function () {
+    return view('frontend.price-list-ipm');
+})->name('price-list-ipm.index');
+
+Route::get('/price-list-kalibrasi', function () {
+    return view('frontend.price-list-kalibrasi');
+})->name('price-list-kalibrasi.index');
+
 Route::get('/member', function () {
     return view('frontend.member-details');
 })->name('member.index');

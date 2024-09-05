@@ -86,16 +86,16 @@
 								<div class="main-menu">
 									<nav class="navigation">
 										<ul class="nav menu">
-											<li class="active"><a href="{{ route('home.index') }}">Home </a></li>
-											<li><a href="#">Member </a></li>
+											<li><a href="{{ route('home.index') }}">Home </a></li>
+											<li><a href="{{ route('list-members.index') }}">Members </a></li>
 											<li><a href="#">Price List <i class="icofont-rounded-down"></i></a>
 												<ul class="dropdown">
-													<li><a href="#">Price List IPM</a></li>
-													<li><a href="#">Price List Kalibrasi</a></li>
+													<li><a href="{{ route('price-list-ipm.index') }}">Price List IPM</a></li>
+													<li><a href="{{ route('price-list-kalibrasi.index') }}">Price List Kalibrasi</a></li>
 												</ul>
 											</li>
 											<li><a href="{{ route('contact-us.index') }}">Contact Us</a></li>
-											<li><a href="{{ route('about-us.index') }}">About Us </a></li>
+											<li class="active"><a href="{{ route('about-us.index') }}">About Us </a></li>
 										</ul>
 									</nav>
 								</div>

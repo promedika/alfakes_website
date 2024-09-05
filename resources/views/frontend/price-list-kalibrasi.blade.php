@@ -10,7 +10,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		
 		<!-- Title -->
-        <title>ALFAKES - Member Details</title>
+        <title>ALFAKES - Price List Kalibrasi</title>
 		
 		<!-- Favicon -->
         <link rel="icon" href="{{ asset('/assets/frontend/img/Alfakes - Icon.png') }}">
@@ -36,6 +36,9 @@
         <link rel="stylesheet" href="{{ asset('/assets/frontend/css/animate.min.css') }}">
 		<!-- Magnific Popup CSS -->
         <link rel="stylesheet" href="{{ asset('/assets/frontend/css/magnific-popup.css') }}">
+
+		<!-- Datatables -->
+        <link rel="stylesheet" href="//cdn.datatables.net/2.0.0/css/dataTables.dataTables.min.css">
 		
 		<!-- Medipro CSS -->
         <link rel="stylesheet" href="{{ asset('/assets/frontend/css/normalize.css') }}">
@@ -115,11 +118,11 @@
 				<div class="bread-inner">
 					<div class="row">
 						<div class="col-12">
-							<h2>Member Details</h2>
+							<h2>Price List Kalibrasi</h2>
 							<ul class="bread-list">
 								<li><a href="{{ route('home.index') }}">Home</a></li>
 								<li><i class="icofont-simple-right"></i></li>
-								<li class="active">Member Details</li>
+								<li class="active">Price List Kalibrasi</li>
 							</ul>
 						</div>
 					</div>
@@ -132,25 +135,107 @@
 		<section class="pf-details section">
 			<div class="container">
 				<div class="row">
+					{{-- <div class="col-12">
+						<ul class="nav nav-pills">
+							<li class="nav-item">
+								<a class="nav-link active" data-toggle="tab" href="#tab1">pill one</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" data-toggle="tab" href="#tab2">pill two</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" data-toggle="tab" href="#tab3">pill three</a>
+							</li>
+						</ul>
+					
+						<div class="tab-content mt-3">
+							<div class="tab-pane show active" id="tab1" role="tabpanel">tab 1 content...</div>
+							<div class="tab-pane " id="tab2" role="tabpanel">tab 2 content..</div>
+							<div class="tab-pane " id="tab3" role="tabpanel">tab 3 content...</div>
+						</div>
+					</div> --}}
+
 					<div class="col-12">
 						<div class="inner-content">
-							<div class="image-slider">
-								<div class="pf-details-slider">
-									<img src="{{ asset('/assets/frontend/img/call-bg.jpg') }}" alt="#">
-									<img src="{{ asset('/assets/frontend/img/call-bg.jpg') }}" alt="#">
-									<img src="{{ asset('/assets/frontend/img/call-bg.jpg') }}" alt="#">
-								</div>
+							<div class="body-text">
+								<h3>Daftar Harga Pengujian dan Kalibrasi Alat Kesehatan</h3>
+								<p>Asosiasi Laboratorium Pengujian dan Kalibrasi Alat Kesehatan Berlaku Mulai Januari 2021</p>
+								<p>&nbsp;</p>
 							</div>
-							<div class="date">
-								<ul>
-									<li><span>PT. Global Promedika Services</span></li>
+						</div>
+
+						<div class="card">
+							<div class="card-header p-2">
+								<ul class="nav nav-pills">
+									<li class="nav-item">
+										<a class="nav-link active" data-toggle="tab" href="#tab1">Kalibrasi Alat Kesehatan</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" data-toggle="tab" href="#tab2">Kalibrasi Kalibrator</a>
+									</li>
 								</ul>
 							</div>
+
+							<div class="card-body">
+								<div class="tab-content mt-3">
+									<div class="tab-pane show active" id="tab1" role="tabpanel">
+										<h4 style="text-align: center;">Kalibrasi Alat Kesehatan</h4>
+										<div class="table-responsive">
+											<table class="table table-bordered table-striped table-hover" id="table">
+												<thead class="thead-dark">
+													<tr>
+														<th>No</th>
+														<th>Nama Alat Kesehatan</th>
+														<th>Harga (Rp)</th>
+													</tr>
+												</thead>
+												<tbody>
+													@php $no = 1; @endphp
+													@for ($i = 0; $i < 10; $i++)
+													<tr>
+														<td>{{$no++}}</td>
+														<td>Anaesthesia + Ventilator</td>
+														<td>1.539.000</td>
+													</tr>
+													@endfor
+												</tbody>
+											</table>
+										</div>
+									</div>
+									<div class="tab-pane " id="tab2" role="tabpanel">
+										<h4 style="text-align: center;">Kalibrasi Kalibrator</h4>
+										<div class="table-responsive">
+											<table class="table table-bordered table-striped table-hover" id="table2">
+												<thead class="thead-dark">
+													<tr>
+														<th>No</th>
+														<th>Nama Kalibrator</th>
+														<th>Harga (Rp)</th>
+													</tr>
+												</thead>
+												<tbody>
+													@php $no = 1; @endphp
+													@for ($i = 0; $i < 10; $i++)
+													<tr>
+														<td>{{$no++}}</td>
+														<td>Electrical Safety Analyzer</td>
+														<td>4.600.000</td>
+													</tr>
+													@endfor
+												</tbody>
+											</table>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="inner-content">
 							<div class="body-text">
-								<h3>Here is the name of this project here</h3>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor a ti incididunt ut labore et dolore to in magna aliqua. Ut enim ad minim veniam, quis to the in nostrud.abore et dolore magna aliqua uis nostrud.Lorem ipsum dolor sit amet, in a in to in a consectetur.ncididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis to the in nostrud.abore et dolore magna in a aliqua uis nostrud.Lorem ipsum dolor sit amet, in aed do eiusmod</p>
-								<p>ncididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis to the in nostrud.abore et dolore magna to in aliqua uis nostrud.Lorem ipsum dolor sit amet, in aed do eiusmod.ncididunt ut labore et dolore magna aliqua. </p>
-								<p>ncididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis to the in nostrud.abore et dolore magna a aliqua uis nostrud.Lorem ipsum dolor sit amet, in aed do eiusmod.ncididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis to the in nostrud.abore et dolore magna aliqua uis nostrud.Lorem ipsum dolor sit amet, in aed do eiusmod. dolor sit amet, in aed do eiusmod.ncididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis to the in nostrud.abore et dolore magna aliqua uis nostrud.</p>
+								<p>&nbsp;</p>
+								<h4>Catatan</h4>
+								<p>1. Harga belum termasuk Pajak yang berlaku</p>
+								<p>2. Harga belum termasuk Biaya Petugas</p>
 							</div>
 						</div>
 					</div>
@@ -180,7 +265,7 @@
 		<!-- jquery Min JS -->
         <script src="{{ asset('/assets/frontend/js/jquery.min.js') }}"></script>
 		<!-- jquery Migrate JS -->
-		<script src="{{ asset('/assets/frontend/js/jquery-migrate-3.0.0.js') }}"></script>
+		{{-- <script src="{{ asset('/assets/frontend/js/jquery-migrate-3.0.0.js') }}"></script> --}}
 		<!-- jquery Ui JS -->
 		<script src="{{ asset('/assets/frontend/js/jquery-ui.min.js') }}"></script>
 		<!-- Easing JS -->
@@ -212,10 +297,28 @@
 		<!-- Magnific Popup JS -->
 		<script src="{{ asset('/assets/frontend/js/jquery.magnific-popup.min.js') }}"></script>
 		<!-- Counter Up CDN JS -->
-		<script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
+		{{-- <script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script> --}}
 		<!-- Bootstrap JS -->
 		<script src="{{ asset('/assets/frontend/js/bootstrap.min.js') }}"></script>
 		<!-- Main JS -->
 		<script src="{{ asset('/assets/frontend/js/main.js') }}"></script>
+
+		<!--Datatables -->
+		<script src="//cdn.datatables.net/2.0.0/js/dataTables.min.js"></script>
+
+		<script>
+			$(document).ready(function(){
+				// let table = new DataTable('#table');
+				$('#table, #table2').DataTable({
+				   "paging": true,
+				   "lengthChange": true,
+				   "searching": true,
+				   "ordering": true,
+				   "info": true,
+				   "autoWidth": false,
+				   "responsive": true,
+				});
+			})
+		</script>
     </body>
 </html>

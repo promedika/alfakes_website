@@ -87,11 +87,11 @@
 									<nav class="navigation">
 										<ul class="nav menu">
 											<li class="active"><a href="{{ route('home.index') }}">Home </a></li>
-											<li><a href="#">Member </a></li>
+											<li><a href="{{ route('list-members.index') }}">Members </a></li>
 											<li><a href="#">Price List <i class="icofont-rounded-down"></i></a>
 												<ul class="dropdown">
-													<li><a href="#">Price List IPM</a></li>
-													<li><a href="#">Price List Kalibrasi</a></li>
+													<li><a href="{{ route('price-list-ipm.index') }}">Price List IPM</a></li>
+													<li><a href="{{ route('price-list-kalibrasi.index') }}">Price List Kalibrasi</a></li>
 												</ul>
 											</li>
 											<li><a href="{{ route('contact-us.index') }}">Contact Us</a></li>
@@ -204,7 +204,7 @@
 		</section>
 		<!--/End Start schedule Area -->
 
-		<!-- Start Feautes -->
+		{{-- <!-- Start Feautes -->
 		<section class="Feautes section">
 			<div class="container">
 				<div class="row">
@@ -306,7 +306,7 @@
 				</div>
 			</div>
 		</div>
-		<!--/ End Fun-facts -->
+		<!--/ End Fun-facts --> --}}
 		
 		<!-- Start Why choose -->
 		<section class="why-choose section" >
@@ -418,8 +418,8 @@
 					<div class="col-lg-4 col-md-6 col-12">
 						<!-- Start Single Service -->
 						<div class="single-service">
-							<i class="icofont icofont-prescription"></i>
-							<h4><a href="service-details.html">General Treatment</a></h4>
+							<i class="icofont icofont-eye-alt"></i>
+							<h4><a href="service-details.html">Vision</a></h4>
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec luctus dictum eros ut imperdiet. </p>	
 						</div>
 						<!-- End Single Service -->
@@ -427,8 +427,8 @@
 					<div class="col-lg-4 col-md-6 col-12">
 						<!-- Start Single Service -->
 						<div class="single-service">
-							<i class="icofont icofont-eye-alt"></i>
-							<h4><a href="service-details.html">Vision Problems</a></h4>
+							<i class="icofont icofont-prescription"></i>
+							<h4><a href="service-details.html">Mission</a></h4>
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec luctus dictum eros ut imperdiet. </p>	
 						</div>
 						<!-- End Single Service -->
@@ -437,7 +437,7 @@
 						<!-- Start Single Service -->
 						<div class="single-service">
 							<i class="icofont icofont-heart-alt"></i>
-							<h4><a href="service-details.html">Heart Surgery</a></h4>
+							<h4><a href="service-details.html">History</a></h4>
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec luctus dictum eros ut imperdiet. </p>	
 						</div>
 						<!-- End Single Service -->
@@ -468,10 +468,7 @@
 								<div class="icon">
 									<i class="icofont icofont-ui-cut"></i>
 								</div>
-								<h4 class="title">Harga IPM</h4>
-								<!-- <div class="price">
-									<p class="amount">$199<span>/ Per Visit</span></p>
-								</div>	 -->
+								<h4 class="title">IPM</h4>
 							</div>
 							<!-- Table List -->
 							<ul class="table-list">
@@ -482,7 +479,7 @@
 								<li class="cross"><i class="icofont icofont-ui-close"></i>Pellentesque eget nibh</li>
 							</ul>
 							<div class="table-bottom">
-								<a class="btn" href="#">Details</a>
+								<a class="btn" href="{{ route('price-list-ipm.index') }}">Details</a>
 							</div>
 							<!-- Table Bottom -->
 						</div>
@@ -496,10 +493,7 @@
 								<div class="icon">
 									<i class="icofont icofont-tooth"></i>
 								</div>
-								<h4 class="title">Harga Kalibrasi</h4>
-								<!-- <div class="price">
-									<p class="amount">$299<span>/ Per Visit</span></p>
-								</div>	 -->
+								<h4 class="title">Kalibrasi Alat Kesehatan</h4>
 							</div>
 							<!-- Table List -->
 							<ul class="table-list">
@@ -510,7 +504,7 @@
 								<li class="cross"><i class="icofont icofont-ui-close"></i>Pellentesque eget nibh</li>
 							</ul>
 							<div class="table-bottom">
-								<a class="btn" href="#">Details</a>
+								<a class="btn" href="{{ route('price-list-kalibrasi.index') }}">Details</a>
 							</div>
 							<!-- Table Bottom -->
 						</div>
@@ -524,10 +518,7 @@
 								<div class="icon">
 									<i class="icofont-heart-beat"></i>
 								</div>
-								<h4 class="title">Harga Kalibrasi Kalibrator</h4>
-								<!-- <div class="price">
-									<p class="amount">$399<span>/ Per Visit</span></p>
-								</div>	 -->
+								<h4 class="title">Kalibrasi Kalibrator</h4>
 							</div>
 							<!-- Table List -->
 							<ul class="table-list">
@@ -538,7 +529,7 @@
 								<li class="cross"><i class="icofont icofont-ui-close"></i>Pellentesque eget nibh</li>
 							</ul>
 							<div class="table-bottom">
-								<a class="btn" href="#">Details</a>
+								<a class="btn" href="{{ route('price-list-kalibrasi.index') }}">Details</a>
 							</div>
 							<!-- Table Bottom -->
 						</div>
@@ -648,7 +639,7 @@
 						<div class="col-lg-6">
 							<div class="contact-us-left">
 								<!--Start Google-map -->
-								<div id="myMap"></div>
+								<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.7766307712195!2d106.78230917355542!3d-6.293060161590652!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f1007dacad53%3A0x69018fcc70143966!2sALFAKES%20INDONESIA!5e0!3m2!1sen!2sid!4v1708327010889!5m2!1sen!2sid" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 								<!--/End Google-map -->
 							</div>
 						</div>
@@ -790,13 +781,7 @@
 		<!-- Magnific Popup JS -->
 		<script src="{{ asset('/assets/frontend/js/jquery.magnific-popup.min.js') }}"></script>
 		<!-- Counter Up CDN JS -->
-		<script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
-		<!-- Google Map API Key JS -->
-		<script src="https://maps.google.com/maps/api/js?key=AIzaSyDGqTyqoPIvYxhn_Sa7ZrK5bENUWhpCo0w"></script>
-		<!-- Gmaps JS -->
-		<script src="{{ asset('/assets/frontend/js/gmaps.min.js') }}"></script>
-		<!-- Map Active JS -->
-		<script src="{{ asset('/assets/frontend/js/map-active.js') }}"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
 		<!-- Bootstrap JS -->
 		<script src="{{ asset('/assets/frontend/js/bootstrap.min.js') }}"></script>
 		<!-- Main JS -->
