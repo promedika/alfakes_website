@@ -10,10 +10,10 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		
 		<!-- Title -->
-        <title>ALFAKES - About Us</title>
+        <title>Alfakes Indonesia - About Us</title>
 		
 		<!-- Favicon -->
-        <link rel="icon" href="{{ asset('/assets/frontend/img/Alfakes - Icon.png') }}">
+        <link rel="icon" href="{{ asset('/assets/frontend/img/favicon.ico') }}">
 		
 		<!-- Google Fonts -->
 		<link href="https://fonts.googleapis.com/css?family=Poppins:200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
@@ -136,22 +136,21 @@
 						<div class="inner-content">
 							<div class="image-slider">
 								<div class="pf-details-slider">
-									<img src="{{ asset('/assets/frontend/img/call-bg.jpg') }}" alt="#">
-									<img src="{{ asset('/assets/frontend/img/call-bg.jpg') }}" alt="#">
-									<img src="{{ asset('/assets/frontend/img/call-bg.jpg') }}" alt="#">
+									<img src="{{ asset('/assets/frontend/img/slider2_full.jpg') }}" alt="#">
+									<img src="{{ asset('/assets/frontend/img/slider_full.jpg') }}" alt="#">
+									<img src="{{ asset('/assets/frontend/img/slider2_full.jpg') }}" alt="#">
 								</div>
 							</div>
 							<div class="date">
 								<ul>
-									<li><span>ALFAKES</span></li>
+									<li><span>Alfakes Indonesia</span></li>
 								</ul>
 							</div>
 							<div class="body-text">
-								<h3>ALFAKES</h3>
-								<p>Asosiasi Perusahaan Laboratorium Pengujian dan Kalibrasi Fasilitas Kesehatan Indonesia</p>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor a ti incididunt ut labore et dolore to in magna aliqua. Ut enim ad minim veniam, quis to the in nostrud.abore et dolore magna aliqua uis nostrud.Lorem ipsum dolor sit amet, in a in to in a consectetur.ncididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis to the in nostrud.abore et dolore magna in a aliqua uis nostrud.Lorem ipsum dolor sit amet, in aed do eiusmod</p>
-								<p>ncididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis to the in nostrud.abore et dolore magna to in aliqua uis nostrud.Lorem ipsum dolor sit amet, in aed do eiusmod.ncididunt ut labore et dolore magna aliqua. </p>
-								<p>ncididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis to the in nostrud.abore et dolore magna a aliqua uis nostrud.Lorem ipsum dolor sit amet, in aed do eiusmod.ncididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis to the in nostrud.abore et dolore magna aliqua uis nostrud.Lorem ipsum dolor sit amet, in aed do eiusmod. dolor sit amet, in aed do eiusmod.ncididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis to the in nostrud.abore et dolore magna aliqua uis nostrud.</p>
+								<h3>Alfakes Indonesia</h3>
+								<p>Asosiasi Perusahaan Laboratorium Pengujian, Kalibrasi, Pemeliharaan dan Perbaikan Fasilitas Kesehatan Indonesia.</p>
+								<p>Didirikan pada tanggal 22 September 2011.</p>
+								<p>Satu-satunya wadah komunikasi dan konsultasi perusahaan yang bergerak di bidang Pengujian/Kalibrasi alat kesehatan pada Fasilitas Kesehatan di Indonesia.</p>
 							</div>
 						</div>
 					</div>
@@ -168,7 +167,7 @@
 					<div class="row">
 						<div class="col-lg-12 col-md-12 col-12">
 							<div class="copyright-content">
-								<p>© Copyright {{date('Y')}} | All Rights Reserved by <a href="{{ route('home.index') }}" target="_blank">ALFAKES</a> </p>
+								<p>© Copyright {{date('Y')}} | All Rights Reserved by <a href="{{ route('home.index') }}" target="_blank">Alfakes Indonesia</a> </p>
 							</div>
 						</div>
 					</div>

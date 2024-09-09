@@ -10,10 +10,10 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		
 		<!-- Title -->
-        <title>ALFAKES - Member Details</title>
+        <title>Alfakes Indonesia - Member Details</title>
 		
 		<!-- Favicon -->
-        <link rel="icon" href="{{ asset('/assets/frontend/img/Alfakes - Icon.png') }}">
+        <link rel="icon" href="{{ asset('/assets/frontend/img/favicon.ico') }}">
 		
 		<!-- Google Fonts -->
 		<link href="https://fonts.googleapis.com/css?family=Poppins:200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
@@ -136,9 +136,9 @@
 						<div class="inner-content">
 							<div class="image-slider">
 								<div class="pf-details-slider">
-									<img src="{{ asset('/assets/frontend/img/call-bg.jpg') }}" alt="#">
-									<img src="{{ asset('/assets/frontend/img/call-bg.jpg') }}" alt="#">
-									<img src="{{ asset('/assets/frontend/img/call-bg.jpg') }}" alt="#">
+									<img src="{{ asset('/assets/frontend/img/banner_gps.png') }}" alt="#">
+									<img src="{{ asset('/assets/frontend/img/banner_gps.png') }}" alt="#">
+									<img src="{{ asset('/assets/frontend/img/banner_gps.png') }}" alt="#">
 								</div>
 							</div>
 							<div class="date">
@@ -147,10 +147,9 @@
 								</ul>
 							</div>
 							<div class="body-text">
-								<h3>Here is the name of this project here</h3>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor a ti incididunt ut labore et dolore to in magna aliqua. Ut enim ad minim veniam, quis to the in nostrud.abore et dolore magna aliqua uis nostrud.Lorem ipsum dolor sit amet, in a in to in a consectetur.ncididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis to the in nostrud.abore et dolore magna in a aliqua uis nostrud.Lorem ipsum dolor sit amet, in aed do eiusmod</p>
-								<p>ncididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis to the in nostrud.abore et dolore magna to in aliqua uis nostrud.Lorem ipsum dolor sit amet, in aed do eiusmod.ncididunt ut labore et dolore magna aliqua. </p>
-								<p>ncididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis to the in nostrud.abore et dolore magna a aliqua uis nostrud.Lorem ipsum dolor sit amet, in aed do eiusmod.ncididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis to the in nostrud.abore et dolore magna aliqua uis nostrud.Lorem ipsum dolor sit amet, in aed do eiusmod. dolor sit amet, in aed do eiusmod.ncididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis to the in nostrud.abore et dolore magna aliqua uis nostrud.</p>
+								<h3>PT. Global Promedika Services</h3>
+								<p>One Stop Solution for Medical Device</p>
+								<p>Kami adalah perusahaan jasa pelayanan purna jual alat - alat kesehatan terdepan yang mengutamakan kepuasan pelanggan.</p>
 							</div>
 						</div>
 					</div>
@@ -167,7 +166,7 @@
 					<div class="row">
 						<div class="col-lg-12 col-md-12 col-12">
 							<div class="copyright-content">
-								<p>© Copyright {{date('Y')}} | All Rights Reserved by <a href="{{ route('home.index') }}" target="_blank">ALFAKES</a> </p>
+								<p>© Copyright {{date('Y')}} | All Rights Reserved by <a href="{{ route('home.index') }}" target="_blank">Alfakes Indonesia</a> </p>
 							</div>
 						</div>
 					</div>

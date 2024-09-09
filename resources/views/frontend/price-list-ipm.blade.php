@@ -10,10 +10,10 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		
 		<!-- Title -->
-        <title>ALFAKES - Price List IPM</title>
+        <title>Alfakes Indonesia - Price List IPM</title>
 		
 		<!-- Favicon -->
-        <link rel="icon" href="{{ asset('/assets/frontend/img/Alfakes - Icon.png') }}">
+        <link rel="icon" href="{{ asset('/assets/frontend/img/favicon.ico') }}">
 		
 		<!-- Google Fonts -->
 		<link href="https://fonts.googleapis.com/css?family=Poppins:200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
@@ -90,8 +90,8 @@
 									<nav class="navigation">
 										<ul class="nav menu">
 											<li><a href="{{ route('home.index') }}">Home </a></li>
-											<li class="active"><a href="{{ route('list-members.index') }}">Members </a></li>
-											<li><a href="#">Price List <i class="icofont-rounded-down"></i></a>
+											<li><a href="{{ route('list-members.index') }}">Members </a></li>
+											<li class="active"><a href="#">Price List <i class="icofont-rounded-down"></i></a>
 												<ul class="dropdown">
 													<li><a href="{{ route('price-list-ipm.index') }}">Price List IPM</a></li>
 													<li><a href="{{ route('price-list-kalibrasi.index') }}">Price List Kalibrasi</a></li>
@@ -139,7 +139,8 @@
 						<div class="inner-content">
 							<div class="body-text">
 								<h3>Daftar Harga IPM Alat Kesehatan</h3>
-								<p>Asosiasi Laboratorium Pengujian dan Kalibrasi Alat Kesehatan Berlaku Mulai Januari 2021</p>
+								{{-- <p>Asosiasi Laboratorium Pengujian dan Kalibrasi Alat Kesehatan Berlaku Mulai Januari 2021</p> --}}
+								<p>Daftar Harga IPM Asosiasi Laboratorium Pengujian dan Kalibrasi Alat Kesehatan</p>
 								<p>&nbsp;</p>
 							</div>
 						</div>
@@ -190,7 +191,7 @@
 					<div class="row">
 						<div class="col-lg-12 col-md-12 col-12">
 							<div class="copyright-content">
-								<p>© Copyright {{date('Y')}} | All Rights Reserved by <a href="{{ route('home.index') }}" target="_blank">ALFAKES</a> </p>
+								<p>© Copyright {{date('Y')}} | All Rights Reserved by <a href="{{ route('home.index') }}" target="_blank">Alfakes Indonesia</a> </p>
 							</div>
 						</div>
 					</div>

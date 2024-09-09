@@ -10,10 +10,10 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		
 		<!-- Title -->
-        <title>ALFAKES - Members</title>
+        <title>Alfakes Indonesia - Members</title>
 		
 		<!-- Favicon -->
-        <link rel="icon" href="{{ asset('/assets/frontend/img/Alfakes - Icon.png') }}">
+        <link rel="icon" href="{{ asset('/assets/frontend/img/favicon.ico') }}">
 		
 		<!-- Google Fonts -->
 		<link href="https://fonts.googleapis.com/css?family=Poppins:200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
@@ -139,7 +139,7 @@
 						<div class="inner-content">
 							<div class="body-text">
 								<h3>Anggota Alfakes Indonesia</h3>
-								<p>Terdiri dari beberapa perusahaan yang bergerak dibidang Alat Kesehatan dan mempunyai standar sertifikasi KAN, yaitu :</p>
+								<p>Terdiri dari beberapa Perusahaan Laboratorium Pengujian, Kalibrasi, Pemeliharaan dan Perbaikan Fasilitas Kesehatan di Indonesia yang mempunyai standar sertifikasi KAN, antara lain yaitu :</p>
 								<p>&nbsp;</p>
 							</div>
 						</div>
@@ -185,7 +185,7 @@
 					<div class="row">
 						<div class="col-lg-12 col-md-12 col-12">
 							<div class="copyright-content">
-								<p>© Copyright {{date('Y')}} | All Rights Reserved by <a href="{{ route('home.index') }}" target="_blank">ALFAKES</a> </p>
+								<p>© Copyright {{date('Y')}} | All Rights Reserved by <a href="{{ route('home.index') }}" target="_blank">Alfakes Indonesia</a> </p>
 							</div>
 						</div>
 					</div>

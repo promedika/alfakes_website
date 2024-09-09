@@ -10,10 +10,10 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		
 		<!-- Title -->
-        <title>ALFAKES - About Us</title>
+        <title>Alfakes Indonesia - About Us</title>
 		
 		<!-- Favicon -->
-        <link rel="icon" href="{{ asset('/assets/frontend/img/Alfakes - Icon.png') }}">
+        <link rel="icon" href="{{ asset('/assets/frontend/img/favicon.ico') }}">
 		
 		<!-- Google Fonts -->
 		<link href="https://fonts.googleapis.com/css?family=Poppins:200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
@@ -136,14 +136,14 @@
 						<div class="col-lg-6">
 							<div class="contact-us-left">
 								<!--Start Google-map -->
-								<div id="myMap"></div>
+								<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.7766307712195!2d106.78230917355542!3d-6.293060161590652!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f1007dacad53%3A0x69018fcc70143966!2sALFAKES%20INDONESIA!5e0!3m2!1sen!2sid!4v1708327010889!5m2!1sen!2sid" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 								<!--/End Google-map -->
 							</div>
 						</div>
 						<div class="col-lg-6">
 							<div class="contact-us-form">
-								<h2>Contact With Us</h2>
-								<p>If you have any questions please fell free to contact with us.</p>
+								<h2>Hubungi Kami</h2>
+								<p>Jika anda mempunyai pertanyaan, jangan ragu untuk menghubungi kami</p>
 								<!-- Form -->
 								<form class="form" method="post" action="mail/mail.php">
 									<div class="row">
@@ -174,7 +174,7 @@
 										</div>
 										<div class="col-12">
 											<div class="form-group login-btn">
-												<button class="btn" type="submit">Send</button>
+												<button class="btn" type="submit">Kirim</button>
 											</div>
 										</div>
 									</div>
@@ -188,24 +188,31 @@
 					<div class="row">
 						<!-- single-info -->
 						<div class="col-lg-4 col-12 ">
+							
 							<div class="single-info">
 								<i class="icofont icofont-ui-call"></i>
 								<div class="content">
-									<h3>+(000) 1234 56789</h3>
-									<p>info@company.com</p>
+									<a href="tel:+62129557451">
+										<h3>(021) 295 57 451</h3>
+									</a>
+									<a href="mailto:alfakessekretariat@gmail.com">
+										<p>alfakessekretariat@gmail.com</p>
+									</a>
 								</div>
 							</div>
 						</div>
 						<!--/End single-info -->
 						<!-- single-info -->
 						<div class="col-lg-4 col-12 ">
+							<a href="https://maps.app.goo.gl/Amc3YYmWGN8evVjx5" target="_blank">
 							<div class="single-info">
 								<i class="icofont-google-map"></i>
 								<div class="content">
-									<h3>2 Fir e Brigade Road</h3>
-									<p>Chittagonj, Lakshmipur</p>
+									<h3>Alfakses Indonesia</h3>
+									<p>Gedung Metropolitan Tower, Lt 13A, Cilandak, Jakarta 12430</p>
 								</div>
 							</div>
+							</a>
 						</div>
 						<!--/End single-info -->
 						<!-- single-info -->
@@ -213,8 +220,8 @@
 							<div class="single-info">
 								<i class="icofont icofont-wall-clock"></i>
 								<div class="content">
-									<h3>Mon - Sat: 8am - 5pm</h3>
-									<p>Sunday Closed</p>
+									<h3>Mon - Fri: 8am - 5pm</h3>
+									<p>Saturday and Sunday Closed</p>
 								</div>
 							</div>
 						</div>
@@ -233,7 +240,7 @@
 					<div class="row">
 						<div class="col-lg-12 col-md-12 col-12">
 							<div class="copyright-content">
-								<p>© Copyright {{date('Y')}} | All Rights Reserved by <a href="{{ route('home.index') }}" target="_blank">ALFAKES</a> </p>
+								<p>© Copyright {{date('Y')}} | All Rights Reserved by <a href="{{ route('home.index') }}" target="_blank">Alfakes Indonesia</a> </p>
 							</div>
 						</div>
 					</div>

@@ -10,10 +10,10 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		
 		<!-- Title -->
-        <title>ALFAKES - About Us</title>
+        <title>Alfakes Indonesia - 404</title>
 		
 		<!-- Favicon -->
-        <link rel="icon" href="{{ asset('/assets/frontend/img/Alfakes - Icon.png') }}">
+        <link rel="icon" href="{{ asset('/assets/frontend/img/favicon.ico') }}">
 		
 		<!-- Google Fonts -->
 		<link href="https://fonts.googleapis.com/css?family=Poppins:200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
@@ -116,9 +116,9 @@
 					<div class="col-lg-6 offset-lg-3 col-12">
 						<!-- Error Inner -->
 						<div class="error-inner">
-							<h1>404<span>Oop's  sorry we can't find that page!</span></h1>
-							<p>Aenean eget sollicitudin lorem, et pretium felis. Nullam euismod diam libero, sed dapibus leo laoreet ut. Suspendisse potenti. Phasellus urna lacus</p>
-							<a href="{{ route('home.index') }}"><button class="btn">Back To Home Page</button></a>
+							<h1>404<span>Oop's maaf kami tidak dapat menemukan halaman yang anda cari!</span></h1>
+							<p>Kerja, Maju, Sejahtera Bersama</p>
+							<a href="{{ route('home.index') }}"><button class="btn">Kembali</button></a>
 						</div>
 						<!--/ End Error Inner -->
 					</div>
@@ -135,7 +135,7 @@
 					<div class="row">
 						<div class="col-lg-12 col-md-12 col-12">
 							<div class="copyright-content">
-								<p>© Copyright {{date('Y')}} | All Rights Reserved by <a href="{{ route('home.index') }}" target="_blank">ALFAKES</a> </p>
+								<p>© Copyright {{date('Y')}} | All Rights Reserved by <a href="{{ route('home.index') }}" target="_blank">Alfakes Indonesia</a> </p>
 							</div>
 						</div>
 					</div>

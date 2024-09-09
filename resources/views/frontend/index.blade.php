@@ -10,10 +10,10 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		
 		<!-- Title -->
-        <title>ALFAKES - Home</title>
+        <title>Alfakes Indonesia - Home</title>
 		
 		<!-- Favicon -->
-        <link rel="icon" href="{{ asset('/assets/frontend/img/Alfakes - Icon.png') }}">
+        <link rel="icon" href="{{ asset('/assets/frontend/img/favicon.ico') }}">
 		
 		<!-- Google Fonts -->
 		<link href="https://fonts.googleapis.com/css?family=Poppins:200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
@@ -116,14 +116,14 @@
 		<section class="slider">
 			<div class="hero-slider">
 				<!-- Start Single Slider -->
-				<div class="single-slider" style="background-image:url('{{ asset('/assets/frontend/img/slider2.jpg') }}')">
+				<div class="single-slider" style="background-image:url('{{ asset('/assets/frontend/img/slider2.png') }}')">
 					<div class="container">
 						<div class="row">
 							<div class="col-lg-7">
 								<div class="text">
-									<h1>Selamat Datang</h1>
+									<h1>Kerja, Maju, Sejahtera Bersama</h1>
 									<p>
-										ALFAKES merupakan Asosiasi  Perusahaan Laboratorium Pengujian dan Kalibrasi Fasilitas Kesehatan, di dirikan oleh beberapa perusahaan kalibrasi di indonesia pada tahun 2012.
+										Berkarya Membangun dan Meningkatkan Kualitas Jaminan Mutu Alat Kesehatan Indonesia.
 									</p>
 								</div>
 							</div>
@@ -132,13 +132,15 @@
 				</div>
 				<!-- End Single Slider -->
 				<!-- Start Single Slider -->
-				<div class="single-slider" style="background-image:url('{{ asset('/assets/frontend/img/slider.jpg') }}')">
+				<div class="single-slider" style="background-image:url('{{ asset('/assets/frontend/img/slider.png') }}')">
 					<div class="container">
 						<div class="row">
 							<div class="col-lg-7">
 								<div class="text">
-									<h1>We Provide <span>Medical</span> Services That You Can <span>Trust!</span></h1>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sed nisl pellentesque, faucibus libero eu, gravida quam. </p>
+									<h1>Kerja, Maju, Sejahtera Bersama</h1>
+									<p>
+										Alfakes Merupakan Asosiasi Perusahaan Laboratorium Pengujian, Kalibrasi, Pemeliharaan dan Perbaikan Fasilitas Kesehatan Indonesia.
+									</p>
 								</div>
 							</div>
 						</div>
@@ -146,13 +148,19 @@
 				</div>
 				<!-- Start End Slider -->
 				<!-- Start Single Slider -->
-				<div class="single-slider" style="background-image:url('{{ asset('/assets/frontend/img/slider3.jpg') }}')">
+				<div class="single-slider" style="background-image:url('{{ asset('/assets/frontend/img/slider3.png') }}')">
 					<div class="container">
 						<div class="row">
 							<div class="col-lg-7">
 								<div class="text">
-									<h1>We Provide <span>Medical</span> Services That You Can <span>Trust!</span></h1>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sed nisl pellentesque, faucibus libero eu, gravida quam. </p>
+									{{-- <h1>Selamat Datang</h1>
+									<p>
+										ALFAKES merupakan Asosiasi Perusahaan Laboratorium Pengujian dan Kalibrasi Fasilitas Kesehatan, di dirikan oleh beberapa perusahaan kalibrasi di indonesia pada tahun 2012.
+									</p> --}}
+									<h1>Kerja, Maju, Sejahtera Bersama</h1>
+									<p>
+										Berkarya Membangun dan Meningkatkan Kualitas Jaminan Mutu Alat Kesehatan Indonesia.
+									</p>
 								</div>
 							</div>
 						</div>
@@ -206,110 +214,6 @@
 			</div>
 		</section>
 		<!--/End Start schedule Area -->
-
-		{{-- <!-- Start Feautes -->
-		<section class="Feautes section">
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-12">
-						<div class="section-title">
-							<h2>We Are Always Ready to Help You</h2>
-							<img src="{{ asset('/assets/frontend/img/section-img.png') }}" alt="#">
-							<p>Lorem ipsum dolor sit amet consectetur adipiscing elit praesent aliquet. pretiumts</p>
-						</div>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-lg-4 col-12">
-						<!-- Start Single features -->
-						<div class="single-features">
-							<div class="signle-icon">
-								<i class="icofont icofont-ambulance-cross"></i>
-							</div>
-							<h3>Emergency Help</h3>
-							<p>Lorem ipsum sit, consectetur adipiscing elit. Maecenas mi quam vulputate.</p>
-						</div>
-						<!-- End Single features -->
-					</div>
-					<div class="col-lg-4 col-12">
-						<!-- Start Single features -->
-						<div class="single-features">
-							<div class="signle-icon">
-								<i class="icofont icofont-medical-sign-alt"></i>
-							</div>
-							<h3>Enriched Pharmecy</h3>
-							<p>Lorem ipsum sit, consectetur adipiscing elit. Maecenas mi quam vulputate.</p>
-						</div>
-						<!-- End Single features -->
-					</div>
-					<div class="col-lg-4 col-12">
-						<!-- Start Single features -->
-						<div class="single-features last">
-							<div class="signle-icon">
-								<i class="icofont icofont-stethoscope"></i>
-							</div>
-							<h3>Medical Treatment</h3>
-							<p>Lorem ipsum sit, consectetur adipiscing elit. Maecenas mi quam vulputate.</p>
-						</div>
-						<!-- End Single features -->
-					</div>
-				</div>
-			</div>
-		</section>
-		<!--/ End Feautes -->
-		
-		<!-- Start Fun-facts -->
-		<div id="fun-facts" class="fun-facts section overlay">
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-3 col-md-6 col-12">
-						<!-- Start Single Fun -->
-						<div class="single-fun">
-							<i class="icofont icofont-home"></i>
-							<div class="content">
-								<span class="counter">3468</span>
-								<p>Hospital Rooms</p>
-							</div>
-						</div>
-						<!-- End Single Fun -->
-					</div>
-					<div class="col-lg-3 col-md-6 col-12">
-						<!-- Start Single Fun -->
-						<div class="single-fun">
-							<i class="icofont icofont-user-alt-3"></i>
-							<div class="content">
-								<span class="counter">557</span>
-								<p>Specialist Doctors</p>
-							</div>
-						</div>
-						<!-- End Single Fun -->
-					</div>
-					<div class="col-lg-3 col-md-6 col-12">
-						<!-- Start Single Fun -->
-						<div class="single-fun">
-							<i class="icofont-simple-smile"></i>
-							<div class="content">
-								<span class="counter">4379</span>
-								<p>Happy Patients</p>
-							</div>
-						</div>
-						<!-- End Single Fun -->
-					</div>
-					<div class="col-lg-3 col-md-6 col-12">
-						<!-- Start Single Fun -->
-						<div class="single-fun">
-							<i class="icofont icofont-table"></i>
-							<div class="content">
-								<span class="counter">32</span>
-								<p>Years of Experience</p>
-							</div>
-						</div>
-						<!-- End Single Fun -->
-					</div>
-				</div>
-			</div>
-		</div>
-		<!--/ End Fun-facts --> --}}
 		
 		<!-- Start Why choose -->
 		<section class="why-choose section" >
@@ -317,9 +221,10 @@
 				<div class="row">
 					<div class="col-lg-12">
 						<div class="section-title">
-							<h2>We Offer Different Services To Improve Your Health</h2>
+							{{-- <h2>Kami Menawarkan Berbagai Layanan Untuk Meningkatkan Fasilitas Kesehatan Anda</h2> --}}
+							<h2>Komunikasi dan Konsultasi Layanan pada Fasilitas kesehatan</h2>
 							<img src="{{ asset('/assets/frontend/img/section-img.png') }}" alt="#">
-							<p>Lorem ipsum dolor sit amet consectetur adipiscing elit praesent aliquet. pretiumts</p>
+							<p>Kerja, Maju, Sejahtera Bersama</p>
 						</div>
 					</div>
 				</div>
@@ -327,15 +232,20 @@
 					<div class="col-lg-6 col-12">
 						<!-- Start Choose Left -->
 						<div class="choose-left">
-							<h3>Who We Are</h3>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pharetra antege vel est lobortis, a commodo magna rhoncus. In quis nisi non emet quam pharetra commodo. </p>
-							<p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. </p>
+							<h3>Siapa Kami</h3>
+							<ul>
+								<li>Asosiasi Perusahaan Laboratorium Pengujian, Kalibrasi, Pemeliharaan dan Perbaikan Fasilitas Kesehatan Indonesia.</li>
+								<br>
+								<li>Didirikan pada tanggal 22 September 2011</li>
+								<br>
+								<li>Satu-satunya wadah komunikasi dan konsultasi perusahaan yang bergerak di bidang Pengujian/Kalibrasi alat kesehatan pada Fasilitas Kesehatan di Indonesia.</li>
+							</ul>
 						</div>
 						<!-- End Choose Left -->
 					</div>
 					<div class="col-lg-6 col-12">
 						<!-- Start Choose Rights -->
-						<div class="choose-right" style="background-image:url('{{ asset('/assets/frontend/img/slider.jpg') }}')">
+						<div class="choose-right" style="background-image:url('{{ asset('/assets/frontend/img/thumbnail-alfakes.png') }}')">
 							<div class="video-image">
 								<!-- Video Animation -->
 								<div class="promo-video">
@@ -362,10 +272,10 @@
 				<div class="row">
 					<div class="col-lg-12 col-md-12 col-12">
 						<div class="content">
-							<h2>Do you need Emergency Medical Care? Call @ 1234 56789</h2>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque porttitor dictum turpis nec gravida.</p>
-							<div class="button">
-								<a href="{{ route('contact-us.index') }}" class="btn">Contact Now</a>
+							<h2>Anda butuh layanan untuk Pengujian, Kalibrasi, Pemeliharaan ataupun Perbaikan alat kesehatan?</h2>
+							{{-- <p>Kerja, Maju, Sejahtera Bersama</p> --}}
+							<div class="button" style="margin-top: 20px;">
+								<a href="{{ route('contact-us.index') }}" class="btn">Hubungi Kami</a>
 							</div>
 						</div>
 					</div>
@@ -380,9 +290,9 @@
 				<div class="row">
 					<div class="col-lg-12">
 						<div class="section-title">
-							<h2>Our Member</h2>
+							<h2>Anggota Kami</h2>
 							<img src="{{ asset('/assets/frontend/img/section-img.png') }}" alt="#">
-							<p>Lorem ipsum dolor sit amet consectetur adipiscing elit praesent aliquet. pretiumts</p>
+							<p>Daftar anggota yg sudah terdaftar di Alfakes Indonesia</p>
 						</div>
 					</div>
 				</div>
@@ -395,7 +305,6 @@
 							<div class="single-pf">
 								<img src="{{ asset('/assets/frontend/img/pf1.png') }}" alt="GPS">
 								<a href="{{ route('member.index') }}" class="btn">View Details</a>
-								{{-- <a href="portfolio-details.html" class="btn">View Details</a> --}}
 							</div>
 							@endfor
 						</div>
@@ -411,37 +320,34 @@
 				<div class="row">
 					<div class="col-lg-12">
 						<div class="section-title">
-							<h2>We Offer Different Services To Improve Your Health</h2>
+							<h2>Visi dan Misi Alfakes Indonesia</h2>
 							<img src="{{ asset('/assets/frontend/img/section-img.png') }}" alt="#">
-							<p>Lorem ipsum dolor sit amet consectetur adipiscing elit praesent aliquet. pretiumts</p>
+							<p>Kerja, Maju, Sejahtera Bersama</p>
 						</div>
 					</div>
 				</div>
 				<div class="row">
-					<div class="col-lg-4 col-md-6 col-12">
+					<div class="col-lg-6 col-md-6 col-12">
 						<!-- Start Single Service -->
 						<div class="single-service">
 							<i class="icofont icofont-eye-alt"></i>
-							<h4><a href="service-details.html">Vision</a></h4>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec luctus dictum eros ut imperdiet. </p>	
+							<h4><a href="service-details.html">Visi</a></h4>
+							<p>Alfakes Menjadi Rujukan  Bagi Tersedianya Layanan Pengujian & Kalibrasi ALat Kesehatan yang bermutu, berkualitas dan terpercaya.</p>	
 						</div>
 						<!-- End Single Service -->
 					</div>
-					<div class="col-lg-4 col-md-6 col-12">
+					<div class="col-lg-6 col-md-6 col-12">
 						<!-- Start Single Service -->
 						<div class="single-service">
 							<i class="icofont icofont-prescription"></i>
-							<h4><a href="service-details.html">Mission</a></h4>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec luctus dictum eros ut imperdiet. </p>	
-						</div>
-						<!-- End Single Service -->
-					</div>
-					<div class="col-lg-4 col-md-6 col-12">
-						<!-- Start Single Service -->
-						<div class="single-service">
-							<i class="icofont icofont-heart-alt"></i>
-							<h4><a href="service-details.html">History</a></h4>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec luctus dictum eros ut imperdiet. </p>	
+							<h4><a href="service-details.html">Misi</a></h4>
+							<p>Meningkatkan Kompetensi anggota dengan program terstruktur dan sistematis.</p>
+							<br>
+							<p>Maju, Sejahtera Bersama anggota dengan persaingan yang wajar.</p>
+							<br>
+							<p>Memastikan semua Anggota untuk menjaga mutu dan layanan yang dapat dipertanggungjawabkan.</p>
+							<br>
+							<p>Memperluas Jaringan Kerjasama</p>
 						</div>
 						<!-- End Single Service -->
 					</div>
@@ -456,9 +362,9 @@
 				<div class="row">
 					<div class="col-lg-12">
 						<div class="section-title">
-							<h2>Price List</h2>
+							<h2>Daftar Harga</h2>
 							<img src="{{ asset('/assets/frontend/img/section-img.png') }}" alt="#">
-							<p>List harga IPM (Inspection Preventive Maintenance), kalibrasi alat kesehatan dan kalibrasi kalibrator.</p>
+							<p>Daftar harga IPM (Inspection Preventive Maintenance), kalibrasi alat kesehatan dan kalibrasi kalibrator.</p>
 						</div>
 					</div>
 				</div>
@@ -469,20 +375,23 @@
 							<!-- Table Head -->
 							<div class="table-head">
 								<div class="icon">
-									<i class="icofont icofont-ui-cut"></i>
+									<i class="icofont-tools-alt-2"></i>
 								</div>
 								<h4 class="title">IPM</h4>
 							</div>
 							<!-- Table List -->
 							<ul class="table-list">
-								<li><i class="icofont icofont-ui-check"></i>Lorem ipsum dolor sit</li>
+								{{-- <li><i class="icofont icofont-ui-check"></i>Lorem ipsum dolor sit</li>
 								<li><i class="icofont icofont-ui-check"></i>Cubitur sollicitudin fentum</li>
 								<li class="cross"><i class="icofont icofont-ui-close"></i>Nullam interdum enim</li>
 								<li class="cross"><i class="icofont icofont-ui-close"></i>Donec ultricies metus</li>
-								<li class="cross"><i class="icofont icofont-ui-close"></i>Pellentesque eget nibh</li>
+								<li class="cross"><i class="icofont icofont-ui-close"></i>Pellentesque eget nibh</li> --}}
+								@for ($i = 0; $i < 5; $i++)
+								<li><i class="icofont icofont-ui-check"></i>Anaesthesia + Ventilator</li>
+								@endfor
 							</ul>
 							<div class="table-bottom">
-								<a class="btn" href="{{ route('price-list-ipm.index') }}">Details</a>
+								<a class="btn" href="{{ route('price-list-ipm.index') }}">Detail</a>
 							</div>
 							<!-- Table Bottom -->
 						</div>
@@ -494,20 +403,18 @@
 							<!-- Table Head -->
 							<div class="table-head">
 								<div class="icon">
-									<i class="icofont icofont-tooth"></i>
+									<i class="icofont icofont-heartbeat"></i>
 								</div>
 								<h4 class="title">Kalibrasi Alat Kesehatan</h4>
 							</div>
 							<!-- Table List -->
 							<ul class="table-list">
-								<li><i class="icofont icofont-ui-check"></i>Lorem ipsum dolor sit</li>
-								<li><i class="icofont icofont-ui-check"></i>Cubitur sollicitudin fentum</li>
-								<li class="cross"><i class="icofont icofont-ui-close"></i>Nullam interdum enim</li>
-								<li class="cross"><i class="icofont icofont-ui-close"></i>Donec ultricies metus</li>
-								<li class="cross"><i class="icofont icofont-ui-close"></i>Pellentesque eget nibh</li>
+								@for ($i = 0; $i < 5; $i++)
+								<li><i class="icofont icofont-ui-check"></i>Anaesthesia + Ventilator</li>
+								@endfor
 							</ul>
 							<div class="table-bottom">
-								<a class="btn" href="{{ route('price-list-kalibrasi.index') }}">Details</a>
+								<a class="btn" href="{{ route('price-list-kalibrasi.index') }}">Detail</a>
 							</div>
 							<!-- Table Bottom -->
 						</div>
@@ -519,20 +426,18 @@
 							<!-- Table Head -->
 							<div class="table-head">
 								<div class="icon">
-									<i class="icofont-heart-beat"></i>
+									<i class="icofont icofont-surgeon-alt"></i>
 								</div>
 								<h4 class="title">Kalibrasi Kalibrator</h4>
 							</div>
 							<!-- Table List -->
 							<ul class="table-list">
-								<li><i class="icofont icofont-ui-check"></i>Lorem ipsum dolor sit</li>
-								<li><i class="icofont icofont-ui-check"></i>Cubitur sollicitudin fentum</li>
-								<li class="cross"><i class="icofont icofont-ui-close"></i>Nullam interdum enim</li>
-								<li class="cross"><i class="icofont icofont-ui-close"></i>Donec ultricies metus</li>
-								<li class="cross"><i class="icofont icofont-ui-close"></i>Pellentesque eget nibh</li>
+								@for ($i = 0; $i < 5; $i++)
+								<li><i class="icofont icofont-ui-check"></i>Electrical Safety Analyzer</li>
+								@endfor
 							</ul>
 							<div class="table-bottom">
-								<a class="btn" href="{{ route('price-list-kalibrasi.index') }}">Details</a>
+								<a class="btn" href="{{ route('price-list-kalibrasi.index') }}">Detail</a>
 							</div>
 							<!-- Table Bottom -->
 						</div>
@@ -542,97 +447,6 @@
 			</div>	
 		</section>	
 		<!--/ End Pricing Table -->
-		
-		{{-- <!-- Start Appointment -->
-		<section class="appointment">
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-12">
-						<div class="section-title">
-							<h2>We Are Always Ready to Help You. Book An Appointment</h2>
-							<img src="{{ asset('/assets/frontend/img/section-img.png') }}" alt="#">
-							<p>Lorem ipsum dolor sit amet consectetur adipiscing elit praesent aliquet. pretiumts</p>
-						</div>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-lg-6 col-md-12 col-12">
-						<form class="form" action="#">
-							<div class="row">
-								<div class="col-lg-6 col-md-6 col-12">
-									<div class="form-group">
-										<input name="name" type="text" placeholder="Name">
-									</div>
-								</div>
-								<div class="col-lg-6 col-md-6 col-12">
-									<div class="form-group">
-										<input name="email" type="email" placeholder="Email">
-									</div>
-								</div>
-								<div class="col-lg-6 col-md-6 col-12">
-									<div class="form-group">
-										<input name="phone" type="text" placeholder="Phone">
-									</div>
-								</div>
-								<div class="col-lg-6 col-md-6 col-12">
-									<div class="form-group">
-										<div class="nice-select form-control wide" tabindex="0"><span class="current">Department</span>
-											<ul class="list">
-												<li data-value="1" class="option selected ">Department</li>
-												<li data-value="2" class="option">Cardiac Clinic</li>
-												<li data-value="3" class="option">Neurology</li>
-												<li data-value="4" class="option">Dentistry</li>
-												<li data-value="5" class="option">Gastroenterology</li>
-											</ul>
-										</div>
-									</div>
-								</div>
-								<div class="col-lg-6 col-md-6 col-12">
-									<div class="form-group">
-										<div class="nice-select form-control wide" tabindex="0"><span class="current">Doctor</span>
-											<ul class="list">
-												<li data-value="1" class="option selected ">Doctor</li>
-												<li data-value="2" class="option">Dr. Akther Hossain</li>
-												<li data-value="3" class="option">Dr. Dery Alex</li>
-												<li data-value="4" class="option">Dr. Jovis Karon</li>
-											</ul>
-										</div>
-									</div>
-								</div>
-								<div class="col-lg-6 col-md-6 col-12">
-									<div class="form-group">
-										<input type="text" placeholder="Date" id="datepicker">
-									</div>
-								</div>
-								<div class="col-lg-12 col-md-12 col-12">
-									<div class="form-group">
-										<textarea name="message" placeholder="Write Your Message Here....."></textarea>
-									</div>
-								</div>
-							</div>
-							<div class="row">
-								<div class="col-lg-5 col-md-4 col-12">
-									<div class="form-group">
-										<div class="button">
-											<button type="submit" class="btn">Send</button>
-										</div>
-									</div>
-								</div>
-								<div class="col-lg-7 col-md-8 col-12">
-									<p>( We will be confirm by an Text Message )</p>
-								</div>
-							</div>
-						</form>
-					</div>
-					<div class="col-lg-6 col-md-12 ">
-						<div class="appointment-image">
-							<img src="{{ asset('/assets/frontend/img/contact-img.png') }}" alt="#">
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-		<!-- End Appointment --> --}}
 
 		<!-- Start Contact Us -->
 		<section class="contact-us section">
@@ -648,8 +462,8 @@
 						</div>
 						<div class="col-lg-6">
 							<div class="contact-us-form">
-								<h2>Contact With Us</h2>
-								<p>If you have any questions please fell free to contact with us.</p>
+								<h2>Hubungi Kami</h2>
+								<p>Jika anda mempunyai pertanyaan, jangan ragu untuk menghubungi kami</p>
 								<!-- Form -->
 								<form class="form" method="post" action="mail/mail.php">
 									<div class="row">
@@ -680,7 +494,7 @@
 										</div>
 										<div class="col-12">
 											<div class="form-group login-btn">
-												<button class="btn" type="submit">Send</button>
+												<button class="btn" type="submit">Kirim</button>
 											</div>
 										</div>
 									</div>
@@ -694,24 +508,31 @@
 					<div class="row">
 						<!-- single-info -->
 						<div class="col-lg-4 col-12 ">
+							
 							<div class="single-info">
 								<i class="icofont icofont-ui-call"></i>
 								<div class="content">
-									<h3>+(000) 1234 56789</h3>
-									<p>info@company.com</p>
+									<a href="tel:+62129557451">
+										<h3>(021) 295 57 451</h3>
+									</a>
+									<a href="mailto:alfakessekretariat@gmail.com">
+										<p>alfakessekretariat@gmail.com</p>
+									</a>
 								</div>
 							</div>
 						</div>
 						<!--/End single-info -->
 						<!-- single-info -->
 						<div class="col-lg-4 col-12 ">
+							<a href="https://maps.app.goo.gl/Amc3YYmWGN8evVjx5" target="_blank">
 							<div class="single-info">
 								<i class="icofont-google-map"></i>
 								<div class="content">
-									<h3>2 Fir e Brigade Road</h3>
-									<p>Chittagonj, Lakshmipur</p>
+									<h3>Alfakses Indonesia</h3>
+									<p>Gedung Metropolitan Tower, Lt 13A, Cilandak, Jakarta 12430</p>
 								</div>
 							</div>
+							</a>
 						</div>
 						<!--/End single-info -->
 						<!-- single-info -->
@@ -719,8 +540,8 @@
 							<div class="single-info">
 								<i class="icofont icofont-wall-clock"></i>
 								<div class="content">
-									<h3>Mon - Sat: 8am - 5pm</h3>
-									<p>Sunday Closed</p>
+									<h3>Mon - Fri: 8am - 5pm</h3>
+									<p>Saturday and Sunday Closed</p>
 								</div>
 							</div>
 						</div>
@@ -739,7 +560,7 @@
 					<div class="row">
 						<div class="col-lg-12 col-md-12 col-12">
 							<div class="copyright-content">
-								<p>© Copyright {{date('Y')}} | All Rights Reserved by <a href="{{ route('home.index') }}" target="_blank">ALFAKES</a> </p>
+								<p>© Copyright {{date('Y')}} | All Rights Reserved by <a href="{{ route('home.index') }}" target="_blank">Alfakes Indonesia</a> </p>
 							</div>
 						</div>
 					</div>
