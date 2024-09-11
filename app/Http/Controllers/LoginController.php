@@ -15,13 +15,13 @@ class LoginController extends Controller
 
     public function actionlogin(Request $request)
     {
-        $phone = $request->phone;
+        $email = $request->email;
         $password = $request->password;
 
-        if(Auth::attempt(['phone' => $phone, 'password' => $password, 'employee_status' => 'ACTIVE',])) {
-            return redirect('/');
+        if(Auth::attempt(['email' => $email, 'password' => $password,])) {
+            return redirect('dashboard');
         } else {
-            return redirect()->back()->with('message', 'Login Gagal, Pastikan phone dan password sudah benar!');
+            return redirect()->back()->with('message', 'Login Gagal, Pastikan email dan password sudah benar!');
         }
     }
     

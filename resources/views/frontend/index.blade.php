@@ -220,12 +220,37 @@
 			<div class="row">
 				<div class="col-lg-12 col-12">
 					<div class="owl-carousel portfolio-slider">
-						@for ($i = 0; $i < 10; $i++)
-						<div class="single-pf">
-							<img src="{{ asset('/assets/frontend/img/pf1.png') }}" alt="GPS">
-							<a href="{{ route('member.index') }}" class="btn">View Details</a>
-						</div>
-						@endfor
+						@if (count($datas) < 5)
+							@for ($i = 0; $i < 10; $i++)
+							<div class="single-pf">
+								<img src="{{ asset('/assets/frontend/img/pf1.png') }}" alt="GPS">
+								<a href="{{ route('member.index', ['id' => 1]) }}" class="btn">View Details</a>
+							</div>
+							@endfor
+						@else
+							@foreach ($datas as $data)
+							<div class="single-pf">
+								@php $dir_path = '/assets/img/logo/'; @endphp
+								@if (!empty($data->logo))
+									@php
+										$image_path = public_path() . $dir_path . $data->logo;
+										if (file_exists($image_path)) {
+											$image_url = asset($dir_path . $data->logo);
+										} else {
+											$image_url = asset('/assets/img/no_image.png');
+										}
+									@endphp
+									<img src="{{ $image_url }}" class="rounded" alt="{{$data->name}}">
+								@else
+									@php
+										$image_url = asset('/assets/img/no_image.png');
+									@endphp
+									<img src="{{ $image_url }}" class="rounded" alt="{{$data->name}}">
+								@endif
+								<a href="{{ route('member.index', ['id' => $data->id]) }}" class="btn">View Details</a>
+							</div>
+							@endforeach
+						@endif
 					</div>
 				</div>
 			</div>
@@ -300,14 +325,12 @@
 						</div>
 						<!-- Table List -->
 						<ul class="table-list">
-							{{-- <li><i class="icofont icofont-ui-check"></i>Lorem ipsum dolor sit</li>
-							<li><i class="icofont icofont-ui-check"></i>Cubitur sollicitudin fentum</li>
-							<li class="cross"><i class="icofont icofont-ui-close"></i>Nullam interdum enim</li>
-							<li class="cross"><i class="icofont icofont-ui-close"></i>Donec ultricies metus</li>
-							<li class="cross"><i class="icofont icofont-ui-close"></i>Pellentesque eget nibh</li> --}}
-							@for ($i = 0; $i < 5; $i++)
+							@for ($i = 0; $i < 4; $i++)
 							<li><i class="icofont icofont-ui-check"></i>Anaesthesia + Ventilator</li>
 							@endfor
+							@foreach ($ipm_prices as $price)
+							<li><i class="icofont icofont-ui-check"></i>{{$price->name}}</li>
+							@endforeach
 						</ul>
 						<div class="table-bottom">
 							<a class="btn" href="{{ route('price-list-ipm.index') }}">Detail</a>
@@ -328,9 +351,12 @@
 						</div>
 						<!-- Table List -->
 						<ul class="table-list">
-							@for ($i = 0; $i < 5; $i++)
+							@for ($i = 0; $i < 4; $i++)
 							<li><i class="icofont icofont-ui-check"></i>Anaesthesia + Ventilator</li>
 							@endfor
+							@foreach ($cal_prices as $price)
+							<li><i class="icofont icofont-ui-check"></i>{{$price->name}}</li>
+							@endforeach
 						</ul>
 						<div class="table-bottom">
 							<a class="btn" href="{{ route('price-list-kalibrasi.index') }}">Detail</a>
@@ -351,9 +377,12 @@
 						</div>
 						<!-- Table List -->
 						<ul class="table-list">
-							@for ($i = 0; $i < 5; $i++)
+							@for ($i = 0; $i < 4; $i++)
 							<li><i class="icofont icofont-ui-check"></i>Electrical Safety Analyzer</li>
 							@endfor
+							@foreach ($calib_prices as $price)
+							<li><i class="icofont icofont-ui-check"></i>{{$price->name}}</li>
+							@endforeach
 						</ul>
 						<div class="table-bottom">
 							<a class="btn" href="{{ route('price-list-kalibrasi.index') }}">Detail</a>
@@ -384,36 +413,36 @@
 							<h2>Hubungi Kami</h2>
 							<p>Jika anda mempunyai pertanyaan, jangan ragu untuk menghubungi kami</p>
 							<!-- Form -->
-							<form class="form" method="post" action="mail/mail.php">
+							<form class="form form-email" method="post">
 								<div class="row">
 									<div class="col-lg-6">
 										<div class="form-group">
-											<input type="text" name="name" placeholder="Name" required="">
+											<input type="text" name="name" placeholder="Name" required>
 										</div>
 									</div>
 									<div class="col-lg-6">
 										<div class="form-group">
-											<input type="email" name="email" placeholder="Email" required="">
+											<input type="text" name="email" placeholder="Email" required>
 										</div>
 									</div>
 									<div class="col-lg-6">
 										<div class="form-group">
-											<input type="text" name="phone" placeholder="Phone" required="">
+											<input type="text" name="phone" placeholder="Phone" required>
 										</div>
 									</div>
 									<div class="col-lg-6">
 										<div class="form-group">
-											<input type="text" name="subject" placeholder="Subject" required="">
+											<input type="text" name="subject" placeholder="Subject" required>
 										</div>
 									</div>
 									<div class="col-lg-12">
 										<div class="form-group">
-											<textarea name="message" placeholder="Your Message" required=""></textarea>
+											<textarea name="message" placeholder="Your Message" required></textarea>
 										</div>
 									</div>
 									<div class="col-12">
 										<div class="form-group login-btn">
-											<button class="btn" type="submit">Kirim</button>
+											<button class="btn btn-send-email" type="submit">Kirim</button>
 										</div>
 									</div>
 								</div>
@@ -513,4 +542,77 @@
 	<script src="{{ asset('/assets/frontend/js/bootstrap.min.js') }}"></script>
 	<!-- Main JS -->
 	<script src="{{ asset('/assets/frontend/js/main.js') }}"></script>
+
+	<script>
+        $(document).ready(function() {
+            $.ajaxSetup({
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                }
+            });
+
+			$(document).on('keyup', "input[name=phone]", function(e) {
+                e.preventDefault;
+                let check = /^\d+$/.test($(this).val());
+                if (!check) {
+					Swal.fire({
+						title: "Phone",
+						text: "Inputan harus angka",
+						icon: "info",
+						confirmButtonColor: "#3085d6",
+					}).then((result) => {
+						if (result.isConfirmed) {
+							$(this).val('');
+						}
+					});
+                }
+            });
+
+            $('.form-email .btn-send-email').click(function() {
+                $('.form-email').submit(function(e) {
+                    e.preventDefault();
+                    var formData = new FormData(this);
+                    $.ajax({
+                        url: "{{ route('send-email.store') }}",
+                        type: 'POST',
+                        data: formData,
+                        processData: false,
+                        contentType: false,
+                        cache: false,
+                        enctype: 'multipart/form-data',
+                        beforeSend: function() {
+                            $('.btn-send-email').prop('disabled',true);
+                            $('.preloader').removeClass('preloader-deactivate');
+                        },
+                        success: function(data) {
+							$('.preloader').addClass('preloader-deactivate');
+                            Swal.fire({
+                                title: "Email",
+                                text: "Kirim Email Berhasil",
+                                icon: "success",
+                                confirmButtonColor: "#3085d6",
+                            }).then((result) => {
+                                if (result.isConfirmed) {
+									location.reload();
+                                }
+                            });
+                        },
+                        error: function(response) {
+							$('.preloader').addClass('preloader-deactivate');
+                            Swal.fire({
+                                title: "Email",
+                                text: "Kirim Email Gagal",
+                                icon: "error",
+                                confirmButtonColor: "#3085d6",
+                            }).then((result) => {
+                                if (result.isConfirmed) {
+                                    location.reload();
+                                }
+                            });
+                        }
+                    })
+                })
+            })
+        })
+    </script>
 @endsection

@@ -3,9 +3,8 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
-use Illuminate\Support\Facades\Hash;
 
-class CreateUsersTable extends Migration
+class CreatePriceListsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -14,15 +13,15 @@ class CreateUsersTable extends Migration
      */
     public function up()
     {
-        Schema::create('users', function (Blueprint $table) {
-            $table->increments('id');
-            $table->string('email')->nullable();
-            $table->string('fullname')->nullable();
-            $table->string('password')->default(Hash::make('Alfakes01'));
-            $table->string('profile')->default('default.jpg');
+        Schema::create('price_lists', function (Blueprint $table) {
+            $table->id();
+            $table->string('name')->nullable();
+            $table->string('type')->nullable();
+            $table->string('price')->nullable();
+            $table->string('image')->nullable();
+            $table->text('description')->nullable();
             $table->integer('created_by')->nullable();
             $table->integer('updated_by')->nullable();
-            $table->rememberToken();
             $table->timestamps();
         });
     }
@@ -34,6 +33,6 @@ class CreateUsersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('users');
+        Schema::dropIfExists('price_lists');
     }
 }

@@ -72,20 +72,23 @@
 								<table class="table table-bordered table-striped table-hover" id="table">
 									<thead class="thead-dark">
 										<tr>
-											<th>No</th>
-											<th>Nama Alat Kesehatan</th>
-											<th>Harga (Rp)</th>
+											<th style="text-align: left;">No</th>
+											<th style="text-align: left;">Nama Alat Kesehatan</th>
+											<th style="text-align: right;">Harga (Rp)</th>
 										</tr>
 									</thead>
 									<tbody>
 										@php $no = 1; @endphp
-										@for ($i = 0; $i < 10; $i++)
+										@foreach ($ipm_prices as $data)
 										<tr>
-											<td>{{$no++}}</td>
-											<td>Anaesthesia + Ventilator</td>
-											<td>2.309.000</td>
+											<td style="text-align: left;">{{$no++}}</td>
+											<td style="text-align: left;">{{$data->name}}</td>
+											<td style="text-align: right;">
+												@php $price = isset($data->price) ? number_format($data->price,0,"",'.') : 0; @endphp
+                                                {{ $price }}
+											</td>
 										</tr>
-										@endfor
+										@endforeach
 									</tbody>
 								</table>
 							</div>

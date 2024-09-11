@@ -4,12 +4,12 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>@yield('title') | Alfakes</title>
+    <title>Alfakes Indonesia - @yield('title')</title>
 
     <meta name="csrf-token" content="{{ csrf_token() }}" />
 
     <!-- favicon -->
-    <link rel="icon" type="image/x-icon" href="{{ asset('/assets/img/favicon.png') }}">
+    <link rel="icon" href="{{ asset('/assets/frontend/img/favicon.ico') }}">
 
     <!-- Google Font: Source Sans Pro -->
     <link rel="stylesheet"
@@ -22,6 +22,9 @@
     <link rel="stylesheet" href="{{ asset('/assets/AdminLTE-3.2.0/plugins/select2/css/select2.min.css') }}">
     <link rel="stylesheet"
         href="{{ asset('/assets/AdminLTE-3.2.0/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css') }}">
+    <!-- SweetAlert2 -->
+    <link rel="stylesheet" href="{{ asset('/assets/AdminLTE-3.2.0/plugins/sweetalert2-theme-bootstrap-4/bootstrap-4.min.css') }}">
+    
     <!-- csrf -->
     <meta name="csrf-token" content="{{ csrf_token() }}" />
 
@@ -66,9 +69,6 @@
                         @endif
                     </a>
                     <div class="dropdown-menu dropdown-menu-md">
-                        {{-- <a href="{{ route('dashboard.user.show', ['id' => Auth::user()->id]) }}"
-                            user-id="{{ Auth::User()->id }}" class="dropdown-item btn-profile"
-                            style="text-align: left"><i class="fas fa-user"> Profile</i></a> --}}
                         <a href="#" user-id="{{ Auth::User()->id }}"
                             class="dropdown-item btn-edit-user-master-password" style="text-align: center"><i
                                 class="fas fa-cog"> Ubah Password</i></a>
@@ -87,42 +87,38 @@
         <!-- /.navbar -->
 
         <!-- Main Sidebar Container -->
-        <aside class="main-sidebar sidebar-light-primary elevation-4"
-            style="background: linear-gradient(to right, #b6e6ff, #2997b6);">
+        <aside class="main-sidebar sidebar-light-primary elevation-4" style="background: #dce6f0;">
             <!-- Brand Logo -->
-            <a href="{{ route('dashboard.index') }}" class="brand-link" style="text-align: center">
-                <img src="{{ asset('assets/img/logo_alfakes.png') }}" alt="Alfakes Logo" class="brand-image">
-                <span class="brand-text font-weight-light"><strong>ALFAKES</strong></span>
+            <a href="{{ route('dashboard.index') }}" class="brand-link">
+                <img src="{{ asset('assets/img/logo_alfakes_only.png') }}" alt="Alfakes Indonesia" class="brand-image"
+                    style="margin-left: 5px; margin-right: 0; max-height: 50px; margin-top: -0.5rem;">
+                <strong>
+                    <span class="brand-text" style="color: #b2d136;">ALFA</span><span class="brand-text" style="color: #1a76d1;">KES</span>
+                </strong>
             </a>
 
             <!-- Sidebar -->
             <div class="sidebar">
                 <!-- Sidebar Menu -->
                 <nav class="mt-2">
-                    <ul class="nav nav-pills nav-sidebar nav-child-indent flex-column" data-widget="treeview" role="menu"
+                    <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu"
                         data-accordion="false">
                         <li class="nav-item">
                             <a href="{{ route('dashboard.index') }}" class="nav-link">
-                                <p>
-                                    <i class="nav-icon fas fa-tachometer-alt"></i>
-                                    Dashboard
-                                </p>
+                                <i class="nav-icon fas fa-tachometer-alt"></i>
+                                <p>Dashboard</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{ route('dashboard.users.index') }}" class="nav-link">
-                                <p>
-                                    <i class="nav-icon fa fa-user"></i>
-                                    User
-                                </p>
+                            <a href="{{ route('members.index') }}" class="nav-link">
+                                <i class="nav-icon fa fa-users"></i>
+                                <p>Members</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{ route('dashboard.index') }}" class="nav-link">
-                                <p>
-                                    <i class="nav-icon fa fa-users"></i>
-                                    Peserta
-                                </p>
+                            <a href="{{ route('price_lists.index') }}" class="nav-link">
+                                <i class="nav-icon fa fa-tags"></i>
+                                <p>Price Lists</p>
                             </a>
                         </li>
                     </ul>
@@ -147,7 +143,7 @@
                 &nbsp;
             </div>
             <!-- Default to the left -->
-            <strong>ALFAKES - All rights reserved - Copyright &copy; {{ date('Y') }}</strong>
+            <strong>&copy; Copyright {{date('Y')}} | All Rights Reserved by <a href="{{ route('home.index') }}" target="_blank">Alfakes Indonesia</a></strong>
         </footer>
     </div>
 
@@ -201,6 +197,9 @@
     <script src="{{ asset('/assets/AdminLTE-3.2.0/dist/js/adminlte.min.js') }}"></script>
     <!-- Select2 -->
     <script src="{{ asset('/assets/AdminLTE-3.2.0/plugins/select2/js/select2.full.min.js') }}"></script>
+    <!-- SweetAlert2 -->
+    <script src="{{ asset('/assets/AdminLTE-3.2.0/plugins/sweetalert2/sweetalert2.min.js') }}"></script>
+
     <script>
         $(document).ready(function() {
             $.ajaxSetup({

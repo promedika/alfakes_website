@@ -2,29 +2,25 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\department as Department;
-use App\Models\EmpPosition;
-use App\Models\EmpStatus;
-use App\Models\Outlet;
-use App\Models\Uploads;
 use App\Models\User;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use App\Models\Members;
 
 class DashboardController extends Controller
 {
     public function __construct()
     {
         $this->middleware('auth');
-        // $hak_akses = HelperController::hak_akses();
-        // dd($hak_akses);
 
     }
+
     public function index(Request $request)
     {
-        return view('index');
+        $datas = Members::all();
+        return view('index', compact('datas'));
     }
 
     public function login()

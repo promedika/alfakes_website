@@ -1,5 +1,5 @@
-<!doctype html>
-<html class="no-js" lang="zxx">
+<!DOCTYPE html>
+<html lang="en">
     <head>
         <!-- Meta Tags -->
 		<meta charset="utf-8">
@@ -20,6 +20,9 @@
 
 		<!-- csrf -->
 		<meta name="csrf-token" content="{{ csrf_token() }}" />
+
+		<!-- SweetAlert2 -->
+		<link rel="stylesheet" href="{{ asset('/assets/AdminLTE-3.2.0/plugins/sweetalert2-theme-bootstrap-4/bootstrap-4.min.css') }}">
 
 		<style>
 			.logo img {
@@ -110,7 +113,7 @@
 					<div class="row">
 						<div class="col-lg-12 col-md-12 col-12">
 							<div class="copyright-content">
-								<p>© Copyright {{date('Y')}} | All Rights Reserved by <a href="{{ route('home.index') }}" target="_blank">Alfakes Indonesia</a> </p>
+								<p>&copy; Copyright {{date('Y')}} | All Rights Reserved by <a href="{{ route('home.index') }}" target="_self">Alfakes Indonesia</a> </p>
 							</div>
 						</div>
 					</div>
@@ -120,6 +123,8 @@
 		</footer>
 		<!--/ End Footer Area -->
 		
+		<!-- SweetAlert2 -->
+		<script src="{{ asset('/assets/AdminLTE-3.2.0/plugins/sweetalert2/sweetalert2.min.js') }}"></script>
 		@yield('custom_link_js')
     </body>
 </html>

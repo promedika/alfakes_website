@@ -78,15 +78,15 @@
 									</thead>
 									<tbody>
 										@php $no = 1; @endphp
-										@for ($i = 0; $i < 10; $i++)
+										@foreach ($datas as $data)
 										<tr>
 											<td>{{$no++}}</td>
-											<td>PT. Global Promedika Services</td>
+											<td>{{$data->name}}</td>
 											<td>
-												<a href="{{ route('member.index') }}"><button class="btn">View</button></a>
+												<a href="{{ route('member.index', ['id' => $data->id]) }}"><button class="btn">View</button></a>
 											</td>
 										</tr>
-										@endfor
+										@endforeach
 									</tbody>
 								</table>
 							</div>

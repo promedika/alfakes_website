@@ -3,9 +3,8 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
-use Illuminate\Support\Facades\Hash;
 
-class CreatePesertasTable extends Migration
+class CreateMembersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -14,15 +13,14 @@ class CreatePesertasTable extends Migration
      */
     public function up()
     {
-        Schema::create('pesertas', function (Blueprint $table) {
-            $table->increments('id');
+        Schema::create('members', function (Blueprint $table) {
+            $table->id();
             $table->string('name')->nullable();
-            $table->string('image')->nullable();
-            $table->string('keterangan')->nullable();
-            $table->string('status')->nullable();
-			$table->string('status_delete')->nullable();
-			$table->date('approved_at')->nullable();
-			$table->string('approved_by')->nullable();
+            $table->string('logo')->nullable();
+            $table->string('slide1')->nullable();
+            $table->string('slide2')->nullable();
+            $table->string('slide3')->nullable();
+            $table->longText('description')->nullable();
             $table->integer('created_by')->nullable();
             $table->integer('updated_by')->nullable();
             $table->timestamps();
@@ -36,6 +34,6 @@ class CreatePesertasTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('pesertas');
+        Schema::dropIfExists('members');
     }
 }

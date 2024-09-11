@@ -37,33 +37,14 @@ Route::fallback(function () {
     return view('frontend.404');
 });
 
-Route::get('/', function () {
-    return view('frontend.index');
-})->name('home.index');
-
-Route::get('/list-of-members', function () {
-    return view('frontend.list-of-members');
-})->name('list-members.index');
-
-Route::get('/price-list-ipm', function () {
-    return view('frontend.price-list-ipm');
-})->name('price-list-ipm.index');
-
-Route::get('/price-list-kalibrasi', function () {
-    return view('frontend.price-list-kalibrasi');
-})->name('price-list-kalibrasi.index');
-
-Route::get('/member', function () {
-    return view('frontend.member-details');
-})->name('member.index');
-
-Route::get('/contact-us', function () {
-    return view('frontend.contact-us');
-})->name('contact-us.index');
-
-Route::get('/about-us', function () {
-    return view('frontend.about-us');
-})->name('about-us.index');
+Route::get('/', 'App\Http\Controllers\FrontendController@feHome')->name('home.index');
+Route::get('/list-of-members', 'App\Http\Controllers\FrontendController@feMembers')->name('list-members.index');
+Route::get('/price-list-ipm', 'App\Http\Controllers\FrontendController@feIPMPrice')->name('price-list-ipm.index');
+Route::get('/price-list-kalibrasi', 'App\Http\Controllers\FrontendController@feCalibrationPrice')->name('price-list-kalibrasi.index');
+Route::get('/member/{id}', 'App\Http\Controllers\FrontendController@feMemberDetail')->name('member.index');
+Route::get('/contact-us', 'App\Http\Controllers\FrontendController@feContactUs')->name('contact-us.index');
+Route::get('/about-us', 'App\Http\Controllers\FrontendController@feAboutUs')->name('about-us.index');
+Route::post('/send-email', 'App\Http\Controllers\FrontendController@feSendEmail')->name('send-email.store');
 
 Route::get('/login', 'App\Http\Controllers\LoginController@formlogin')->name('login')->middleware('guest');
 Route::post('/login', 'App\Http\Controllers\LoginController@actionLogin')->name('action.login');
@@ -99,5 +80,17 @@ Route::group(['middleware' => 'auth'], function () {
     Route::post('/peserta/edit', 'App\Http\Controllers\PesertaController@edit')->name('peserta.edit');
     Route::post('/peserta/update', 'App\Http\Controllers\PesertaController@update')->name('peserta.update');
     Route::post('/peserta/delete', 'App\Http\Controllers\PesertaController@destroy')->name('peserta.delete');
+
+    Route::get('/price_lists', 'App\Http\Controllers\PriceListsController@index')->name('price_lists.index');
+    Route::post('/price_lists/store', 'App\Http\Controllers\PriceListsController@store')->name('price_lists.store');
+    Route::post('/price_lists/edit', 'App\Http\Controllers\PriceListsController@edit')->name('price_lists.edit');
+    Route::post('/price_lists/update', 'App\Http\Controllers\PriceListsController@update')->name('price_lists.update');
+    Route::post('/price_lists/delete', 'App\Http\Controllers\PriceListsController@destroy')->name('price_lists.delete');
+
+    Route::get('/members', 'App\Http\Controllers\MembersController@index')->name('members.index');
+    Route::post('/members/store', 'App\Http\Controllers\MembersController@store')->name('members.store');
+    Route::post('/members/edit', 'App\Http\Controllers\MembersController@edit')->name('members.edit');
+    Route::post('/members/update', 'App\Http\Controllers\MembersController@update')->name('members.update');
+    Route::post('/members/delete', 'App\Http\Controllers\MembersController@destroy')->name('members.delete');
 
 });

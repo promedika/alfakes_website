@@ -39,7 +39,7 @@
                     <div class="col-md-12">
                         <div class="card card-info">
                             <div class="card-header">
-                                <h4 class="card-title">Iuran</h4>
+                                <h4 class="card-title">Members</h4>
                                 <div class="card-tools">
                                     <button type="button" class="btn btn-tool" data-card-widget="collapse">
                                         <i class="fas fa-minus"></i>
@@ -52,11 +52,34 @@
                                         <tr>
                                             <th>No</th>
                                             <th>Name</th>
-                                            <th>Year</th>
-                                            <th>File</th>
+                                            <th>Logo</th>
                                         </tr>
                                     </thead>
                                     <tbody>
+                                        @php $no = 1; @endphp
+                                        @foreach ($datas as $role)
+                                            <td>{{ $no++ }}</td>
+                                            <td>{{ $role->name }}</td>
+                                            <td class="text-center">
+                                                @php $dir_path = '/assets/img/logo/'; @endphp
+                                                @if (!empty($role->logo))
+                                                    @php
+                                                        $image_path = public_path() . $dir_path . $role->logo;
+                                                        if (file_exists($image_path)) {
+                                                            $image_url = asset($dir_path . $role->logo);
+                                                        } else {
+                                                            $image_url = asset('/assets/img/no_image.png');
+                                                        }
+                                                    @endphp
+                                                    <img src="{{ $image_url }}" class="rounded" style="width: 100px; height: auto">
+                                                @else
+                                                    @php
+                                                        $image_url = asset('/assets/img/no_image.png');
+                                                    @endphp
+                                                    <img src="{{ $image_url }}" class="rounded" style="width: 100px; height: auto">
+                                                @endif
+                                            </td>
+                                        @endforeach
                                     </tbody>
                                 </table>
                             </div>

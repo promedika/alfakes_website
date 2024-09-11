@@ -16,19 +16,11 @@ class AdminUserSeeder extends Seeder
     public function run()
     {
         DB::table('users')->insert([
-            'fullname' => 'Super User',
-            'nik' =>  '123456789',
-            'phone' => '123456789',
-            'password' => Hash::make('alfakes'),
-            'jabatan'  =>  'Super Admin',
+            'fullname' => 'Admin',
+            'email' =>  'admin@admin.com',
+            'password' => Hash::make('Alfakes01'),
             'created_by' => '1',
             'updated_by' => '1',
-            'start_date' => '2022-05-09',
-            'end_date' => '3022-05-09',
-            'job_status' => 'ACTIVE',
-            'employee_status' => 'ACTIVE',
-            'role' => '0',
-            'approved_at' => now(),
         ]);
     }
 }

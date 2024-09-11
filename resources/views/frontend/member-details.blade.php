@@ -58,20 +58,66 @@
 					<div class="inner-content">
 						<div class="image-slider">
 							<div class="pf-details-slider">
-								<img src="{{ asset('/assets/frontend/img/banner_gps.png') }}" alt="#">
-								<img src="{{ asset('/assets/frontend/img/banner_gps.png') }}" alt="#">
-								<img src="{{ asset('/assets/frontend/img/banner_gps.png') }}" alt="#">
+								@php 
+								$dir_path_slide1 = '/assets/img/slide1/'; 
+								$dir_path_slide2 = '/assets/img/slide2/'; 
+								$dir_path_slide3 = '/assets/img/slide3/'; 
+								@endphp
+
+								@if (!empty($data->slide1))
+									@php
+										$image_path_slide1 = public_path() . $dir_path_slide1 . $data->slide1;
+										if (file_exists($image_path_slide1)) {
+											$image_url1 = asset($dir_path_slide1 . $data->slide1);
+										} else {
+											$image_url1 = asset('/assets/frontend/img/no_img.png');
+										}
+									@endphp
+								@else
+									@php $image_url1 = asset('/assets/frontend/img/no_img.png'); @endphp
+								@endif
+
+								@if (!empty($data->slide2))
+									@php
+										$image_path_slide2 = public_path() . $dir_path_slide2 . $data->slide2;
+										if (file_exists($image_path_slide2)) {
+											$image_url2 = asset($dir_path_slide2 . $data->slide2);
+										} else {
+											$image_url2 = asset('/assets/frontend/img/no_img.png');
+										}
+									@endphp
+								@else
+									@php $image_url2 = asset('/assets/frontend/img/no_img.png'); @endphp
+								@endif
+
+								@if (!empty($data->slide3))
+									@php
+										$image_path_slide3 = public_path() . $dir_path_slide3 . $data->slide3;
+										if (file_exists($image_path_slide3)) {
+											$image_url3 = asset($dir_path_slide3 . $data->slide3);
+										} else {
+											$image_url3 = asset('/assets/frontend/img/no_img.png');
+										}
+									@endphp
+								@else
+									@php $image_url3 = asset('/assets/frontend/img/no_img.png'); @endphp
+								@endif
+								
+								<img src="{{ $image_url1 }}" alt="{{$data->name}}">
+								<img src="{{ $image_url2 }}" alt="{{$data->name}}">
+								<img src="{{ $image_url3 }}" alt="{{$data->name}}">
 							</div>
 						</div>
 						<div class="date">
 							<ul>
-								<li><span>PT. Global Promedika Services</span></li>
+								<li><span>{{$data->name}}</span></li>
 							</ul>
 						</div>
 						<div class="body-text">
-							<h3>PT. Global Promedika Services</h3>
+							{!! $data->description !!}
+							{{-- <h3>PT. Global Promedika Services</h3>
 							<p>One Stop Solution for Medical Device</p>
-							<p>Kami adalah perusahaan jasa pelayanan purna jual alat - alat kesehatan terdepan yang mengutamakan kepuasan pelanggan.</p>
+							<p>Kami adalah perusahaan jasa pelayanan purna jual alat - alat kesehatan terdepan yang mengutamakan kepuasan pelanggan.</p> --}}
 						</div>
 					</div>
 				</div>

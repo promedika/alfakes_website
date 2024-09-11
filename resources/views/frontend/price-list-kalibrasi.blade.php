@@ -94,13 +94,16 @@
 											</thead>
 											<tbody>
 												@php $no = 1; @endphp
-												@for ($i = 0; $i < 10; $i++)
+												@foreach ($cal_prices as $data)
 												<tr>
-													<td>{{$no++}}</td>
-													<td>Anaesthesia + Ventilator</td>
-													<td>1.539.000</td>
+													<td style="text-align: left;">{{$no++}}</td>
+													<td style="text-align: left;">{{$data->name}}</td>
+													<td style="text-align: right;">
+														@php $price = isset($data->price) ? number_format($data->price,0,"",'.') : 0; @endphp
+														{{ $price }}
+													</td>
 												</tr>
-												@endfor
+												@endforeach
 											</tbody>
 										</table>
 									</div>
@@ -118,13 +121,16 @@
 											</thead>
 											<tbody>
 												@php $no = 1; @endphp
-												@for ($i = 0; $i < 10; $i++)
+												@foreach ($calib_prices as $data)
 												<tr>
-													<td>{{$no++}}</td>
-													<td>Electrical Safety Analyzer</td>
-													<td>4.600.000</td>
+													<td style="text-align: left;">{{$no++}}</td>
+													<td style="text-align: left;">{{$data->name}}</td>
+													<td style="text-align: right;">
+														@php $price = isset($data->price) ? number_format($data->price,0,"",'.') : 0; @endphp
+														{{ $price }}
+													</td>
 												</tr>
-												@endfor
+												@endforeach
 											</tbody>
 										</table>
 									</div>
