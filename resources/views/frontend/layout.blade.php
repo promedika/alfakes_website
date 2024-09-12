@@ -8,9 +8,27 @@
 		<meta name="description" content="Alfakes Indonesia - Asosiasi Perusahaan Laboratorium Pengujian dan Kalibrasi Fasilitas Kesehatan Indonesia">
 		<meta name='copyright' content=''>
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		{{-- <!-- Google / Search Engine Tags --> --}}
+		<meta itemprop="name" content="Alfakes Indonesia - Kerja, Maju, Sejahtera Bersama" />
+		<meta itemprop="description" content="Alfakes Indonesia - Asosiasi Perusahaan Laboratorium Pengujian dan Kalibrasi Fasilitas Kesehatan Indonesia" />
+		<meta itemprop="image" content="{{ asset('/assets/frontend/img/alfakes_og_meta.jpg') }}" />
+
+		{{-- <!-- Facebook Meta Tags --> --}}
+		<meta property="og:url" content="https://alfakesindonesia.com/" />
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content="Alfakes Indonesia - Kerja, Maju, Sejahtera Bersama" />
+		<meta property="og:description" content="Alfakes Indonesia - Asosiasi Perusahaan Laboratorium Pengujian dan Kalibrasi Fasilitas Kesehatan Indonesia" />
+		<meta property="og:image" content="{{ asset('/assets/frontend/img/alfakes_og_meta.jpg') }}" />
+
+		{{-- <!-- Twitter Meta Tags --> --}}
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:title" content="Alfakes Indonesia - Kerja, Maju, Sejahtera Bersama" />
+		<meta name="twitter:description" content="Alfakes Indonesia - Asosiasi Perusahaan Laboratorium Pengujian dan Kalibrasi Fasilitas Kesehatan Indonesia" />
+		<meta name="twitter:image" content="{{ asset('/assets/frontend/img/alfakes_og_meta.jpg') }}" />
 		
 		<!-- Title -->
-		<title>Alfakes Indonesia - @yield('title')</title>
+		<title>Alfakes Indonesia - Kerja, Maju, Sejahtera Bersama - @yield('title')</title>
 		
 		<!-- Favicon -->
         <link rel="icon" href="{{ asset('/assets/frontend/img/favicon.ico') }}">

@@ -3,10 +3,28 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Alfakes Indonesia - Login</title>
+  <title>Alfakes Indonesia - Kerja, Maju, Sejahtera Bersama - Login</title>
+
+  {{-- <!-- Google / Search Engine Tags --> --}}
+  <meta itemprop="name" content="Alfakes Indonesia - Kerja, Maju, Sejahtera Bersama" />
+  <meta itemprop="description" content="Alfakes Indonesia - Asosiasi Perusahaan Laboratorium Pengujian dan Kalibrasi Fasilitas Kesehatan Indonesia" />
+  <meta itemprop="image" content="{{ asset('/assets/frontend/img/alfakes_og_meta.jpg') }}" />
+
+  {{-- <!-- Facebook Meta Tags --> --}}
+  <meta property="og:url" content="https://alfakesindonesia.com/login" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Alfakes Indonesia - Kerja, Maju, Sejahtera Bersama" />
+  <meta property="og:description" content="Alfakes Indonesia - Asosiasi Perusahaan Laboratorium Pengujian dan Kalibrasi Fasilitas Kesehatan Indonesia" />
+  <meta property="og:image" content="{{ asset('/assets/frontend/img/alfakes_og_meta.jpg') }}" />
+
+  {{-- <!-- Twitter Meta Tags --> --}}
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Alfakes Indonesia - Kerja, Maju, Sejahtera Bersama" />
+  <meta name="twitter:description" content="Alfakes Indonesia - Asosiasi Perusahaan Laboratorium Pengujian dan Kalibrasi Fasilitas Kesehatan Indonesia" />
+  <meta name="twitter:image" content="{{ asset('/assets/frontend/img/alfakes_og_meta.jpg') }}" />
 
   <!-- favicon -->
-  <link rel="icon" type="image/x-icon" href="{{asset('favicon.png')}}">
+  <link rel="icon" href="{{ asset('/assets/frontend/img/favicon.ico') }}">
 
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
