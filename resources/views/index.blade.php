@@ -58,6 +58,7 @@
                                     <tbody>
                                         @php $no = 1; @endphp
                                         @foreach ($datas as $role)
+                                        <tr>
                                             <td>{{ $no++ }}</td>
                                             <td>{{ $role->name }}</td>
                                             <td class="text-center">
@@ -79,6 +80,7 @@
                                                     <img src="{{ $image_url }}" class="rounded" style="width: 100px; height: auto">
                                                 @endif
                                             </td>
+                                        </tr>
                                         @endforeach
                                     </tbody>
                                 </table>

@@ -248,6 +248,7 @@
 									<img src="{{ $image_url }}" class="rounded" alt="{{$data->name}}">
 								@endif
 								<a href="{{ route('member.index', ['id' => $data->id]) }}" class="btn">View Details</a>
+								<p style="text-align: center;">{{$data->name}}</p>
 							</div>
 							@endforeach
 						@endif
