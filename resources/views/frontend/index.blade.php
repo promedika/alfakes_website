@@ -240,12 +240,16 @@
 											$image_url = asset('/assets/img/no_image.png');
 										}
 									@endphp
-									<img src="{{ $image_url }}" class="rounded" alt="{{$data->name}}">
+<div style="text-align: center;">
+    <img src="{{ $image_url }}" class="rounded" style="width: 200px; height: 200px; display: block; margin: 0 auto;" alt="{{$data->name}}">
+</div>
 								@else
 									@php
 										$image_url = asset('/assets/img/no_image.png');
 									@endphp
-									<img src="{{ $image_url }}" class="rounded" alt="{{$data->name}}">
+									<div style="text-align: center;">
+									<img src="{{ $image_url }}" class="rounded" style="width: 200px; height: 200px; display: block; margin: 0 auto;" alt="{{$data->name}}">
+								</div>
 								@endif
 								<a href="{{ route('member.index', ['id' => $data->id]) }}" class="btn">View Details</a>
 								<p style="text-align: center;">{{$data->name}}</p>

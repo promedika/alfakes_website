@@ -73,6 +73,7 @@
 										<tr>
 											<th>No</th>
 											<th>Name</th>
+											<th>Logo</th>
 											<th>Action</th>
 										</tr>
 									</thead>
@@ -82,6 +83,25 @@
 										<tr>
 											<td>{{$no++}}</td>
 											<td>{{$data->name}}</td>
+											<td class="text-center">
+												@php $dir_path = '/assets/img/logo/'; @endphp
+												@if (!empty($data->logo))
+													@php
+														$image_path = public_path() . $dir_path . $data->logo;
+														if (file_exists($image_path)) {
+															$image_url = asset($dir_path . $data->logo);
+														} else {
+															$image_url = asset('/assets/img/no_image.png');
+														}
+													@endphp
+													<img src="{{ $image_url }}" class="rounded" style="width: 100px; height: auto">
+												@else
+													@php
+														$image_url = asset('/assets/img/no_image.png');
+													@endphp
+													<img src="{{ $image_url }}" class="rounded" style="width: 100px; height: auto">
+												@endif
+											</td>
 											<td>
 												<a href="{{ route('member.index', ['id' => $data->id]) }}"><button class="btn">View</button></a>
 											</td>
