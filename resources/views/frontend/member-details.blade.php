@@ -113,11 +113,45 @@
 								<li><span>{{$data->name}}</span></li>
 							</ul>
 						</div>
-						<div class="body-text">
-							{!! $data->description !!}
-							{{-- <h3>PT. Global Promedika Services</h3>
-							<p>One Stop Solution for Medical Device</p>
-							<p>Kami adalah perusahaan jasa pelayanan purna jual alat - alat kesehatan terdepan yang mengutamakan kepuasan pelanggan.</p> --}}
+						<?php
+						$description = $data->description;
+						$dom = new DOMDocument();
+						libxml_use_internal_errors(true);
+						$dom->loadHTML($description);
+						libxml_clear_errors();
+						
+						$tables = $dom->getElementsByTagName('table');
+						$alamat = '';
+						$wilayah = '';
+						
+						if ($tables->length > 0) {
+							$rows = $tables->item(0)->getElementsByTagName('tr');
+							foreach ($rows as $row) {
+								$cols = $row->getElementsByTagName('td');
+								if ($cols->length > 1) {
+									if (strpos($cols->item(0)->nodeValue, 'Alamat Perusahaan') !== false) {
+										$alamat = $cols->item(1)->nodeValue;
+									}
+									if (strpos($cols->item(0)->nodeValue, 'Wilayah') !== false) {
+										$wilayah = $cols->item(1)->nodeValue;
+									}
+								}
+							}
+						}
+						?>
+						<div class="body-text" style="font-family: 'Poppins', sans-serif;" style="margin-top: 10px;">
+							<h3>Profile</h3>
+							<br>
+							<table style="border-collapse: collapse; width: 100%;">
+								<tr>
+								  <td style="border: 1px solid rgb(206, 201, 201); padding: 10px; font-weight:bold; padding-right: 10px; color:black;">Alamat Perusahaan</td>
+								  <td style="border: 1px solid rgb(206, 201, 201); padding: 10px; color:black;">{{$alamat}}</td>
+								</tr>
+								<tr>
+								  <td style="border: 1px solid rgb(206, 201, 201); padding: 10px; font-weight:bold; padding-right: 10px; color:black;">Wilayah</td>
+								  <td style="border: 1px solid rgb(206, 201, 201); padding: 10px; color:black;">{{$wilayah}}</td>
+								</tr>
+							  </table>
 						</div>
 					</div>
 				</div>
