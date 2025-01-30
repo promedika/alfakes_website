@@ -356,11 +356,10 @@
 						</div>
 						<!-- Table List -->
 						<ul class="table-list">
-							@for ($i = 0; $i < 4; $i++)
-							<li><i class="icofont icofont-ui-check"></i>Anaesthesia + Ventilator</li>
-							@endfor
-							@foreach ($cal_prices as $price)
-							<li><i class="icofont icofont-ui-check"></i>{{$price->name}}</li>
+							@foreach ($cal_prices as $k => $price)
+								@if ($k <= 4)
+									<li><i class="icofont icofont-ui-check"></i>{{$price->name}}</li>
+								@endif
 							@endforeach
 						</ul>
 						<div class="table-bottom">
