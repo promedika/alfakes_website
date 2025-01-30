@@ -139,14 +139,14 @@
 						</div>
 					</div>
 
-					<div class="inner-content">
+					{{-- <div class="inner-content">
 						<div class="body-text">
 							<p>&nbsp;</p>
 							<h4>Catatan</h4>
 							<p>1. Harga belum termasuk Pajak yang berlaku</p>
 							<p>2. Harga belum termasuk Biaya Petugas</p>
 						</div>
-					</div>
+					</div> --}}
 				</div>
 			</div>
 		</div>
