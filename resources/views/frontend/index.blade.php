@@ -34,6 +34,9 @@
 	{{-- <!-- Slider Area --> --}}
 	<section class="slider">
 		<div class="hero-slider">
+			<div class="single-slider" style="background-image:url('{{ asset('/assets/frontend/img/flyer_alfakes.png') }}')">
+				
+			</div>
 			<!-- Start Single Slider -->
 			<div class="single-slider" style="background-image:url('{{ asset('/assets/frontend/img/slider2.png') }}')">
 				<div class="container">
@@ -87,9 +90,7 @@
 			</div>
 			<!-- End Single Slider -->
 				<!-- Start Single Slider -->
-			<div class="single-slider" style="background-image:url('{{ asset('/assets/frontend/img/flyer_alfakes.png') }}')">
-				
-			</div>
+			
 			<!-- End Single Slider -->
 		</div>
 	</section>
@@ -146,7 +147,7 @@
                 <div class="col-lg-12">
                     <div class="section-title">
                         {{-- <h2>Kami Menawarkan Berbagai Layanan Untuk Meningkatkan Fasilitas Kesehatan Anda</h2> --}}
-                        <h2>Kegiatan ALFAKES</h2>
+                        <h2>Kegiatan Alfakes</h2>
                         <img src="{{ asset('/assets/frontend/img/section-img.png') }}" alt="#">
                         <p>Kerja, Maju, Sejahtera Bersama</p>
                     </div>
