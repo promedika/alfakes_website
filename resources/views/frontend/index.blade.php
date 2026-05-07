@@ -28,6 +28,18 @@
 	<link rel="stylesheet" href="{{ asset('/assets/frontend/css/normalize.css') }}">
 	<link rel="stylesheet" href="{{ asset('/assets/frontend/style.css') }}">
 	<link rel="stylesheet" href="{{ asset('/assets/frontend/css/responsive.css') }}">
+	<style>
+		.custom-schedule{
+    margin-top:150px;
+}
+
+/* Mobile */
+@media (max-width: 768px){
+    .custom-schedule{
+        margin-top:5px;
+    }
+}
+</style>
 @endsection
 
 @section('custom_content')
@@ -97,7 +109,7 @@
 	{{-- <!--/ End Slider Area --> --}}
 	
 	{{-- <!-- Start Schedule Area --> --}}
-	<section class="schedule">
+	<section class="schedule custom-schedule">
 		<div class="container">
 			<div class="schedule-inner">
 				<div class="row">
