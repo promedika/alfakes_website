@@ -86,6 +86,11 @@
 				</div>
 			</div>
 			<!-- End Single Slider -->
+				<!-- Start Single Slider -->
+			<div class="single-slider" style="background-image:url('{{ asset('/assets/frontend/img/flyer_alfakes.png') }}')">
+				
+			</div>
+			<!-- End Single Slider -->
 		</div>
 	</section>
 	{{-- <!--/ End Slider Area --> --}}
@@ -133,6 +138,32 @@
 		</div>
 	</section>
 	{{-- <!--/End Start schedule Area --> --}}
+
+	 {{-- <!-- Start Why choose --> --}}
+    <section class="why-choose section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title">
+                        {{-- <h2>Kami Menawarkan Berbagai Layanan Untuk Meningkatkan Fasilitas Kesehatan Anda</h2> --}}
+                        <h2>Kegiatan ALFAKES</h2>
+                        <img src="{{ asset('/assets/frontend/img/section-img.png') }}" alt="#">
+                        <p>Kerja, Maju, Sejahtera Bersama</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+
+                <div class="col-lg-12">
+					<img src="{{ asset('/assets/frontend/img/flyer_alfakes.png') }}">
+
+
+                    <!-- End Choose Rights -->
+                </div>
+            </div>
+        </div>
+    </section>
+    {{-- <!--/ End Why choose --> --}}
 	
 	{{-- <!-- Start Why choose --> --}}
 	<section class="why-choose section" >
